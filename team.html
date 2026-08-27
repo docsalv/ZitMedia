@@ -1,0 +1,3537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Meet the team, resource persons, board of directors and board of trustees of the Aisha Abba Abdullahi Memorial Foundation (3AM Foundation).">
+
+    <meta name="keywords"
+        content="3AM Foundation, Aisha Abba Abdullahi Memorial Foundation, team, board of directors, board of trustees, resource persons, blood cancer, blood donation">
+
+    <meta name="author"
+        content="Aisha Abba Abdullahi Memorial Foundation">
+
+    <meta name="theme-color"
+        content="#f47b20">
+
+    <title>Our Team | 3AM Foundation</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         PAGE-SPECIFIC CSS
+    ====================================================== -->
+
+    <style>
+
+        /* =====================================================
+           GLOBAL
+        ====================================================== */
+
+        :root {
+            --orange: #f47b20;
+            --orange-dark: #d96510;
+            --black: #151515;
+            --dark: #202020;
+            --text: #303030;
+            --muted: #737373;
+            --light: #f7f7f5;
+            --white: #ffffff;
+            --border: #e8e8e8;
+            --container: 1180px;
+
+            --shadow:
+                0 20px 60px rgba(0, 0, 0, 0.08);
+
+            --shadow-hover:
+                0 28px 70px rgba(0, 0, 0, 0.14);
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        button {
+            font-family: inherit;
+        }
+
+
+        .container {
+            width: min(
+                calc(100% - 40px),
+                var(--container)
+            );
+
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           PAGE LOADER
+        ====================================================== */
+
+        .page-loader {
+            position: fixed;
+            inset: 0;
+            background: var(--white);
+            z-index: 9999;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            animation:
+                loaderFade 0.8s ease 1.2s forwards;
+        }
+
+
+        .loader-content {
+            text-align: center;
+
+            animation:
+                loaderPulse 1.3s ease-in-out infinite;
+        }
+
+
+        .loader-symbol {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: var(--orange);
+            color: white;
+
+            display: grid;
+            place-items: center;
+
+            margin: 0 auto 14px;
+            font-size: 22px;
+        }
+
+
+        .loader-content span {
+            font-size: 11px;
+            letter-spacing: 3px;
+            font-weight: 800;
+        }
+
+
+        @keyframes loaderPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+
+            50% {
+                transform: scale(1.08);
+                opacity: 1;
+            }
+        }
+
+
+        @keyframes loaderFade {
+
+            to {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
+        }
+
+
+        /* =====================================================
+           ANNOUNCEMENT BAR
+        ====================================================== */
+
+        .announcement-bar {
+            background: var(--black);
+            color: white;
+            padding: 10px 0;
+        }
+
+
+        .announcement-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+
+        .announcement-message {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+        }
+
+
+        .announcement-message i {
+            color: var(--orange);
+        }
+
+
+        .announcement-link {
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            transition: 0.3s ease;
+        }
+
+
+        .announcement-link:hover {
+            color: var(--orange);
+        }
+
+
+        /* =====================================================
+           HEADER
+        ====================================================== */
+
+        .site-header {
+            background: rgba(255, 255, 255, 0.96);
+            border-bottom: 1px solid #eeeeee;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            backdrop-filter: blur(12px);
+        }
+
+
+        .nav-container {
+            min-height: 82px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+
+        .brand-mark {
+            width: 46px;
+            height: 46px;
+
+            display: grid;
+            place-items: center;
+        }
+
+
+        .brand-mark img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+
+        .brand-text strong {
+            font-family: "Manrope", sans-serif;
+            font-size: 21px;
+            letter-spacing: -0.5px;
+        }
+
+
+        .brand-text span {
+            font-size: 8px;
+            letter-spacing: 3px;
+            margin-top: 4px;
+            font-weight: 700;
+            color: #777;
+        }
+
+
+        .main-nav ul {
+            list-style: none;
+
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+
+        .nav-link {
+            font-size: 14px;
+            font-weight: 600;
+
+            position: relative;
+            padding: 30px 0;
+
+            transition: 0.3s ease;
+        }
+
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--orange);
+        }
+
+
+        .nav-link::after {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            bottom: 22px;
+
+            width: 0;
+            height: 2px;
+
+            background: var(--orange);
+
+            transition: 0.3s ease;
+        }
+
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+
+        .nav-request {
+            font-size: 12px;
+            font-weight: 700;
+
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+
+        .nav-request:hover {
+            color: var(--orange);
+        }
+
+
+        .btn-orange {
+            background: var(--orange);
+            color: white;
+
+            padding: 13px 18px;
+            border-radius: 5px;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            transition: 0.3s ease;
+        }
+
+
+        .btn-orange:hover {
+            background: var(--orange-dark);
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+           MOBILE MENU
+        ====================================================== */
+
+        .mobile-menu-toggle {
+            display: none;
+
+            border: none;
+            background: transparent;
+
+            cursor: pointer;
+
+            width: 42px;
+            height: 42px;
+
+            padding: 8px;
+        }
+
+
+        .mobile-menu-toggle span {
+            display: block;
+
+            width: 25px;
+            height: 2px;
+
+            background: var(--black);
+
+            margin: 5px auto;
+
+            transition: 0.3s ease;
+        }
+
+
+        .mobile-nav-overlay {
+            display: none;
+        }
+
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .team-hero {
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #151515 0%,
+                    #252525 55%,
+                    #333 100%
+                );
+
+            color: white;
+
+            padding: 110px 0 100px;
+        }
+
+
+        .team-hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 420px;
+            height: 420px;
+
+            border: 1px solid rgba(244, 123, 32, 0.3);
+
+            border-radius: 50%;
+
+            right: -100px;
+            top: -130px;
+
+            animation:
+                heroOrbit 12s linear infinite;
+        }
+
+
+        .team-hero::after {
+            content: "";
+
+            position: absolute;
+
+            width: 250px;
+            height: 250px;
+
+            border: 1px solid rgba(244, 123, 32, 0.18);
+
+            border-radius: 50%;
+
+            right: 80px;
+            bottom: -150px;
+
+            animation:
+                heroOrbit 9s linear infinite reverse;
+        }
+
+
+        @keyframes heroOrbit {
+
+            from {
+                transform:
+                    rotate(0deg)
+                    scale(1);
+            }
+
+            50% {
+                transform:
+                    rotate(180deg)
+                    scale(1.08);
+            }
+
+            to {
+                transform:
+                    rotate(360deg)
+                    scale(1);
+            }
+        }
+
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: var(--orange);
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+
+            animation:
+                fadeUp 0.8s ease both;
+        }
+
+
+        .eyebrow span {
+            width: 35px;
+            height: 2px;
+            background: var(--orange);
+        }
+
+
+        .team-hero h1 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(
+                48px,
+                7vw,
+                82px
+            );
+
+            line-height: 1;
+
+            letter-spacing: -3px;
+            margin-bottom: 25px;
+
+            animation:
+                fadeUp 0.8s ease 0.15s both;
+        }
+
+
+        .team-hero h1 strong {
+            color: var(--orange);
+        }
+
+
+        .team-hero p {
+            max-width: 680px;
+
+            color: #d0d0d0;
+
+            font-size: 17px;
+
+            animation:
+                fadeUp 0.8s ease 0.3s both;
+        }
+
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* =====================================================
+           INTRO
+        ====================================================== */
+
+        .team-intro {
+            padding: 100px 0 70px;
+        }
+
+
+        .section-heading {
+            max-width: 760px;
+            margin-bottom: 55px;
+        }
+
+
+        .section-heading.center {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+
+        .section-heading .eyebrow {
+            color: var(--orange);
+            justify-content: flex-start;
+        }
+
+
+        .section-heading.center .eyebrow {
+            justify-content: center;
+        }
+
+
+        .section-heading h2 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: clamp(
+                34px,
+                5vw,
+                54px
+            );
+
+            line-height: 1.05;
+
+            letter-spacing: -2px;
+
+            color: var(--black);
+
+            margin-bottom: 18px;
+        }
+
+
+        .section-heading h2 strong {
+            color: var(--orange);
+        }
+
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+
+        /* =====================================================
+           TEAM GRID
+        ====================================================== */
+
+        .team-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 30px;
+        }
+
+
+        .team-card {
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.5s cubic-bezier(.2, .8, .2, 1),
+                box-shadow 0.5s ease;
+
+            animation:
+                cardReveal 0.8s ease both;
+        }
+
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+
+        @keyframes cardReveal {
+
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .team-image {
+            height: 390px;
+
+            background: #eeeeee;
+
+            overflow: hidden;
+
+            position: relative;
+        }
+
+
+        .team-image::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, 0.35),
+                    transparent 45%
+                );
+
+            opacity: 0;
+
+            transition: 0.4s ease;
+        }
+
+
+        .team-card:hover .team-image::after {
+            opacity: 1;
+        }
+
+
+        .team-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.8s
+                cubic-bezier(.2, .8, .2, 1);
+        }
+
+
+        .team-card:hover .team-image img {
+            transform: scale(1.06);
+        }
+
+
+        .team-content {
+            padding: 28px;
+        }
+
+
+        .team-role {
+            color: var(--orange);
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            margin-bottom: 8px;
+        }
+
+
+        .team-content h3 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: 23px;
+
+            line-height: 1.2;
+
+            margin-bottom: 13px;
+        }
+
+
+        .team-content h3 sub {
+            font-size: 10px;
+            vertical-align: middle;
+            color: var(--muted);
+        }
+
+
+        .team-content p {
+            color: var(--muted);
+
+            font-size: 14px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           RESOURCE PERSONS
+        ====================================================== */
+
+        .resources-section {
+            background: var(--light);
+            padding: 105px 0;
+        }
+
+
+        .resource-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .resource-card {
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 10px;
+
+            padding: 20px;
+
+            transition:
+                transform 0.4s ease,
+                box-shadow 0.4s ease;
+        }
+
+
+        .resource-card:hover {
+            transform: translateY(-7px);
+            box-shadow: var(--shadow);
+        }
+
+
+        .resource-image {
+            width: 105px;
+            height: 105px;
+
+            border-radius: 50%;
+
+            overflow: hidden;
+
+            margin-bottom: 20px;
+
+            border: 4px solid #fff;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.12);
+
+            background: #eee;
+        }
+
+
+        .resource-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        .resource-card h3 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: 18px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .resource-card p {
+            color: var(--orange);
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            line-height: 1.5;
+        }
+
+
+        .resource-card small {
+            display: block;
+
+            margin-top: 8px;
+
+            color: var(--muted);
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           BOARD SECTION
+        ====================================================== */
+
+        .board-section {
+            padding: 110px 0;
+            background: white;
+        }
+
+
+        .board-section.alt {
+            background: var(--light);
+        }
+
+
+        .board-list {
+            border-top: 1px solid var(--border);
+        }
+
+
+        .board-row {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 30px;
+
+            align-items: center;
+
+            padding: 25px 0;
+
+            border-bottom: 1px solid var(--border);
+
+            transition: 0.3s ease;
+        }
+
+
+        .board-row:hover {
+            padding-left: 12px;
+
+            border-bottom-color:
+                var(--orange);
+        }
+
+
+        .board-name {
+            font-family: "Manrope", sans-serif;
+
+            font-size: 19px;
+
+            font-weight: 700;
+        }
+
+
+        .board-designation {
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+
+        .board-designation::before {
+            content: "";
+
+            display: inline-block;
+
+            width: 25px;
+            height: 2px;
+
+            background: var(--orange);
+
+            margin-right: 12px;
+
+            vertical-align: middle;
+        }
+
+
+        /* =====================================================
+           TRUSTEES
+        ====================================================== */
+
+        .trustee-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .trustee-card {
+            border: 1px solid var(--border);
+
+            padding: 25px 22px;
+
+            border-radius: 8px;
+
+            background: white;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            transition: 0.35s ease;
+        }
+
+
+        .trustee-card:hover {
+            transform: translateX(6px);
+
+            border-color:
+                var(--orange);
+        }
+
+
+        .trustee-number {
+            width: 36px;
+            height: 36px;
+
+            border-radius: 50%;
+
+            background: #fff1e6;
+
+            color: var(--orange);
+
+            display: grid;
+            place-items: center;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            flex-shrink: 0;
+        }
+
+
+        .trustee-name {
+            font-family: "Manrope", sans-serif;
+
+            font-weight: 700;
+
+            font-size: 15px;
+        }
+
+
+        /* =====================================================
+           ORGANOGRAM
+        ====================================================== */
+
+        .organogram-section {
+            background: var(--black);
+
+            color: white;
+
+            padding: 110px 0;
+        }
+
+
+        .organogram-section .section-heading h2 {
+            color: white;
+        }
+
+
+        .organogram-section .section-heading p {
+            color: #aaa;
+        }
+
+
+        .organogram-upload {
+            min-height: 500px;
+
+            border: 1px dashed
+                rgba(255, 255, 255, 0.3);
+
+            border-radius: 14px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 30px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                rgba(255, 255, 255, 0.025);
+        }
+
+
+        .organogram-upload::before {
+            content: "";
+
+            position: absolute;
+
+            width: 300px;
+            height: 300px;
+
+            border: 1px solid
+                rgba(244, 123, 32, 0.2);
+
+            border-radius: 50%;
+
+            animation:
+                organogramPulse 4s
+                ease-in-out infinite;
+        }
+
+
+        @keyframes organogramPulse {
+
+            0%,
+            100% {
+                transform: scale(0.9);
+                opacity: 0.4;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+        }
+
+
+        .organogram-content {
+            position: relative;
+
+            z-index: 2;
+
+            text-align: center;
+
+            max-width: 650px;
+        }
+
+
+        .organogram-icon {
+            width: 80px;
+            height: 80px;
+
+            border-radius: 50%;
+
+            background: var(--orange);
+
+            display: grid;
+
+            place-items: center;
+
+            margin: 0 auto 25px;
+
+            font-size: 30px;
+
+            animation:
+                floatIcon 3s
+                ease-in-out infinite;
+        }
+
+
+        @keyframes floatIcon {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+
+        .organogram-content h3 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: 30px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .organogram-content p {
+            color: #aaa;
+
+            font-size: 14px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .organogram-image {
+            width: 100%;
+
+            max-height: 800px;
+
+            object-fit: contain;
+
+            border-radius: 10px;
+
+            display: none;
+
+            position: relative;
+
+            z-index: 3;
+        }
+
+
+        .organogram-placeholder {
+            display: block;
+        }
+
+
+        /* =====================================================
+           CTA
+        ====================================================== */
+
+        .team-cta {
+            padding: 90px 0;
+
+            background: #fff7f0;
+        }
+
+
+        .cta-box {
+            background: var(--orange);
+
+            color: white;
+
+            border-radius: 16px;
+
+            padding: 55px;
+
+            display: grid;
+
+            grid-template-columns:
+                auto 1fr auto;
+
+            gap: 30px;
+
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .cta-box::after {
+            content: "";
+
+            position: absolute;
+
+            width: 250px;
+            height: 250px;
+
+            border: 1px solid
+                rgba(255, 255, 255, 0.25);
+
+            border-radius: 50%;
+
+            right: -100px;
+            top: -100px;
+
+            animation:
+                ctaRotate 12s
+                linear infinite;
+        }
+
+
+        @keyframes ctaRotate {
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        .cta-icon {
+            width: 65px;
+            height: 65px;
+
+            border-radius: 50%;
+
+            background: white;
+
+            color: var(--orange);
+
+            display: grid;
+
+            place-items: center;
+
+            font-size: 25px;
+        }
+
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .cta-content span {
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+
+        .cta-content h2 {
+            font-family: "Manrope", sans-serif;
+
+            font-size: 34px;
+
+            line-height: 1.1;
+
+            margin: 8px 0;
+        }
+
+
+        .cta-content p {
+            font-size: 14px;
+
+            max-width: 600px;
+
+            opacity: 0.9;
+        }
+
+
+        .cta-action {
+            position: relative;
+
+            z-index: 2;
+
+            background: var(--black);
+
+            color: white;
+
+            padding: 15px 22px;
+
+            border-radius: 5px;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            white-space: nowrap;
+
+            transition: 0.3s ease;
+        }
+
+
+        .cta-action:hover {
+            transform: translateY(-3px);
+
+            background: white;
+
+            color: var(--black);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        .site-footer {
+            background: #111;
+
+            color: white;
+
+            padding: 70px 0 25px;
+        }
+
+
+        .footer-main {
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 1fr 1fr 1fr;
+
+            gap: 60px;
+
+            padding-bottom: 55px;
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.1);
+        }
+
+
+        .footer-brand {
+            max-width: 360px;
+        }
+
+
+        .footer-logo {
+            display: inline-block;
+
+            margin-bottom: 20px;
+        }
+
+
+        .footer-logo img {
+            width: 70px;
+            height: auto;
+        }
+
+
+        .footer-brand p {
+            color: #aaa;
+
+            font-size: 13px;
+
+            line-height: 1.8;
+        }
+
+
+        .footer-title {
+            font-family: "Manrope", sans-serif;
+
+            font-size: 14px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .footer-links {
+            list-style: none;
+        }
+
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+
+        .footer-links a {
+            color: #999;
+
+            font-size: 13px;
+
+            transition: 0.3s ease;
+        }
+
+
+        .footer-links a:hover {
+            color: var(--orange);
+        }
+
+
+        .footer-contact p {
+            color: #999;
+
+            font-size: 13px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .footer-contact i {
+            color: var(--orange);
+
+            width: 20px;
+        }
+
+
+        .footer-bottom {
+            padding-top: 22px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
+
+        .footer-copy {
+            color: #777;
+
+            font-size: 11px;
+        }
+
+
+        .footer-socials {
+            display: flex;
+
+            gap: 8px;
+        }
+
+
+        .footer-socials a {
+            width: 34px;
+            height: 34px;
+
+            border: 1px solid #333;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 50%;
+
+            color: #aaa;
+
+            font-size: 13px;
+
+            transition: 0.3s ease;
+        }
+
+
+        .footer-socials a:hover {
+            background: var(--orange);
+
+            border-color: var(--orange);
+
+            color: white;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           REVEAL ANIMATION
+        ====================================================== */
+
+        .reveal {
+            opacity: 0;
+
+            transform: translateY(35px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+
+        .reveal.visible {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+        @media (max-width: 1050px) {
+
+            .main-nav ul {
+                gap: 18px;
+            }
+
+
+            .nav-request {
+                display: none;
+            }
+
+
+            .team-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .resource-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .trustee-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .footer-main {
+                grid-template-columns:
+                    1.5fr 1fr 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 800px) {
+
+            .main-nav {
+                position: fixed;
+
+                top: 82px;
+
+                right: -100%;
+
+                width: 300px;
+
+                height:
+                    calc(100vh - 82px);
+
+                background: white;
+
+                padding: 35px 25px;
+
+                box-shadow:
+                    -10px 0 30px
+                    rgba(0, 0, 0, 0.08);
+
+                transition:
+                    right 0.4s ease;
+
+                z-index: 1001;
+            }
+
+
+            .main-nav.open {
+                right: 0;
+            }
+
+
+            .main-nav ul {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 0;
+            }
+
+
+            .nav-link {
+                display: block;
+
+                padding: 16px 0;
+
+                width: 100%;
+            }
+
+
+            .nav-link::after {
+                bottom: 8px;
+            }
+
+
+            .nav-actions {
+                display: none;
+            }
+
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+
+            .mobile-nav-overlay {
+                position: fixed;
+
+                inset: 0;
+
+                background:
+                    rgba(0, 0, 0, 0.4);
+
+                z-index: 1000;
+
+                opacity: 0;
+
+                visibility: hidden;
+
+                transition: 0.3s ease;
+            }
+
+
+            .mobile-nav-overlay.active {
+                opacity: 1;
+
+                visibility: visible;
+
+                display: block;
+            }
+
+
+            .mobile-menu-toggle.active span:nth-child(1) {
+                transform:
+                    translateY(7px)
+                    rotate(45deg);
+            }
+
+
+            .mobile-menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+
+            .mobile-menu-toggle.active span:nth-child(3) {
+                transform:
+                    translateY(-7px)
+                    rotate(-45deg);
+            }
+
+
+            .footer-main {
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+
+            .cta-box {
+                grid-template-columns:
+                    1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .container {
+                width:
+                    min(
+                        calc(100% - 30px),
+                        var(--container)
+                    );
+            }
+
+
+            .announcement-inner {
+                align-items: flex-start;
+            }
+
+
+            .announcement-message span {
+                font-size: 11px;
+            }
+
+
+            .announcement-link {
+                font-size: 10px;
+            }
+
+
+            .team-hero {
+                padding: 75px 0;
+            }
+
+
+            .team-hero h1 {
+                letter-spacing: -2px;
+            }
+
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .team-image {
+                height: 360px;
+            }
+
+
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .board-row {
+                grid-template-columns: 1fr;
+
+                gap: 5px;
+            }
+
+
+            .trustee-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .organogram-upload {
+                min-height: 360px;
+            }
+
+
+            .cta-box {
+                padding: 35px 25px;
+            }
+
+
+            .cta-content h2 {
+                font-size: 28px;
+            }
+
+
+            .footer-main {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+
+            .footer-bottom {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         PAGE LOADER
+    ====================================================== -->
+
+    <div class="page-loader" id="pageLoader">
+
+        <div class="loader-content">
+
+            <div class="loader-symbol">
+
+                <i class="fa-solid fa-droplet"></i>
+
+            </div>
+
+            <span>
+                3AM FOUNDATION
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         ANNOUNCEMENT BAR
+    ====================================================== -->
+
+    <div class="announcement-bar">
+
+        <div class="container announcement-inner">
+
+            <div class="announcement-message">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+                <span>
+                    Every drop can become someone's second chance.
+                </span>
+
+            </div>
+
+
+            <a href="donate-blood.html"
+                class="announcement-link">
+
+                Donate Blood
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         HEADER / NAVIGATION
+    ====================================================== -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="container nav-container">
+
+            <!-- LOGO -->
+
+            <a href="index.html"
+                class="brand"
+                aria-label="3AM Foundation Home">
+
+                <div class="brand-mark">
+
+                    <img
+                        src="images/3amlogo.png"
+                        alt="3AM Foundation Logo">
+
+                </div>
+
+
+                <div class="brand-text">
+
+                    <strong>3AM</strong>
+
+                    <span>FOUNDATION</span>
+
+                </div>
+
+            </a>
+
+
+            <!-- DESKTOP NAVIGATION -->
+
+            <nav class="main-nav"
+                id="mainNav"
+                aria-label="Main Navigation">
+
+                <ul>
+
+                    <li>
+                        <a href="index.html"
+                            class="nav-link">
+                            Home
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="about.html"
+                            class="nav-link">
+                            About
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="ourwork.html"
+                            class="nav-link">
+                            Our Work
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="team.html"
+                            class="nav-link active"
+                            aria-current="page">
+                            Our Team
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- NAV ACTIONS -->
+
+            <div class="nav-actions">
+
+                <a href="request-blood.html"
+                    class="nav-request">
+
+                    <i class="fa-solid fa-hand-holding-droplet"></i>
+
+                    Request Blood
+
+                </a>
+
+
+                <a href="donate-blood.html"
+                    class="btn btn-orange nav-donate">
+
+                    Donate Blood
+
+                </a>
+
+            </div>
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button
+                class="mobile-menu-toggle"
+                id="mobileMenuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mainNav"
+                type="button">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- MOBILE NAVIGATION OVERLAY -->
+
+    <div class="mobile-nav-overlay"
+        id="mobileNavOverlay">
+    </div>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="team-hero">
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+
+                        <span></span>
+
+                        THE PEOPLE BEHIND THE MISSION
+
+                    </div>
+
+
+                    <h1>
+
+                        Meet the people
+                        <strong>making a difference.</strong>
+
+                    </h1>
+
+
+                    <p>
+
+                        Behind every life touched by 3AM Foundation
+                        is a team of committed people, professionals,
+                        leaders and partners working together to
+                        strengthen blood access, advance awareness
+                        and create lasting community impact.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             OUR TEAM
+        ================================================== -->
+
+        <section class="team-intro">
+
+            <div class="container">
+
+
+                <div class="section-heading reveal">
+
+                    <div class="eyebrow">
+
+                        <span></span>
+
+                        OUR TEAM
+
+                    </div>
+
+
+                    <h2>
+
+                        People with a
+                        <strong>purpose.</strong>
+
+                    </h2>
+
+
+                    <p>
+
+                        Our team brings together passionate
+                        professionals and dedicated individuals
+                        who contribute their experience, skills
+                        and commitment to advancing the mission
+                        of 3AM Foundation.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- TEAM GRID -->
+
+                <div class="team-grid">
+
+
+                    <!-- TEAM MEMBER 01 -->
+
+                    <article class="team-card reveal">
+
+                        <div class="team-image">
+
+                            <img
+                                src="images/founder.jpeg"
+                                alt="HUM. Huseina Baba-Inna"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <div class="team-content">
+
+                            <div class="team-role">
+                                FOUNDER / CEO
+                            </div>
+
+
+                            <h3>
+                                HUM. Huseina Baba-Inna
+                                <sub>FHSID</sub>
+                            </h3>
+
+
+                            <p>
+
+                                As the devoted caregiver to her late daughter,
+                                Aisha, the Founder of 3AM Foundation transformed
+                                her personal journey of love, resilience, and loss
+                                into a mission dedicated to improving lives and
+                                supporting families in need.
+
+                                <br><br>
+
+                                She is also a Fellow in Humanitarian and Social
+                                Development, committed to advancing compassionate,
+                                sustainable solutions that create meaningful impact
+                                in communities.
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- TEAM MEMBER 02 -->
+
+                    <article class="team-card reveal">
+
+                        <div class="team-image">
+
+                            <img
+                                src="images/team/member-02.jpg"
+                                alt="Dr. Hassan Baba-Inna"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <div class="team-content">
+
+                            <div class="team-role">
+                                HEAD OF ADMINISTRATION
+                            </div>
+
+
+                            <h3>
+                                Dr. Hassan Baba-Inna
+                            </h3>
+
+
+                            <p>
+
+                                As the Founder’s brother who stood beside her
+                                throughout the fight for their late Aisha, he now
+                                serves as Head of Administration, bringing his
+                                experience as an educationist and his deep passion
+                                for research to the mission of 3AM Foundation.
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- TEAM MEMBER 03 -->
+
+                    <article class="team-card reveal">
+
+                        <div class="team-image">
+
+                            <img
+                                src="images/DADA.jpeg"
+                                alt="Hyeldai Dada Ulea"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <div class="team-content">
+
+                            <div class="team-role">
+                                ADMINISTRATIVE SECRETARY
+                            </div>
+
+
+                            <h3>
+                                Hyeldai Dada Ulea
+                            </h3>
+
+
+                            <p>
+
+                                With a BSc in Microbiology and a passion for
+                                cancer research, he serves as the Secretary,
+                                overseeing the Foundation’s day-to-day activities
+                                and ensuring that programmes, communications,
+                                and operations are carried out effectively.
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- TEAM MEMBER 04 -->
+
+                    <article class="team-card reveal">
+
+                        <div class="team-image">
+
+                            <img
+                                src="images/team/member-04.jpg"
+                                alt="Abdulwahab Baba-Inna"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <div class="team-content">
+
+                            <div class="team-role">
+                                FINANCIAL SECRETARY
+                            </div>
+
+
+                            <h3>
+                                Abdulwahab Baba-Inna
+                            </h3>
+
+
+                            <p>
+
+                                Responsible for supporting the Foundation’s
+                                financial administration, maintaining proper
+                                financial records and promoting accountability
+                                in the management of organisational resources.
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- TEAM MEMBER 05 -->
+
+                    <article class="team-card reveal">
+
+                        <div class="team-image">
+
+                            <img
+                                src="images/team/member-05.jpg"
+                                alt="Salvation Sarki"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <div class="team-content">
+
+                            <div class="team-role">
+                                MEDIA
+                            </div>
+
+
+                            <h3>
+                                Salvation Sarki
+                            </h3>
+
+
+                            <p>
+
+                                Leads the Foundation’s media and communications
+                                efforts, helping to amplify its mission, programmes,
+                                stories and public awareness initiatives across
+                                digital platforms.
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- TEAM MEMBER 06 -->
+
+                    <article class="team-card reveal">
+
+                        <div class="team-image">
+
+                            <img
+                                src="images/team/member-06.jpg"
+                                alt="Reedwan Abo"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <div class="team-content">
+
+                            <div class="team-role">
+                                COMMUNITY ENGAGEMENT LEAD
+                            </div>
+
+
+                            <h3>
+                                Reedwan Abo
+                            </h3>
+
+
+                            <p>
+
+                                Supports community engagement initiatives by
+                                connecting the Foundation with communities,
+                                stakeholders and beneficiaries while helping
+                                strengthen participation in its programmes.
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RESOURCE PERSONS
+        ================================================== -->
+
+        <section class="resources-section">
+
+            <div class="container">
+
+
+                <div class="section-heading center reveal">
+
+                    <div class="eyebrow">
+
+                        <span></span>
+
+                        RESOURCE PERSONS
+
+                    </div>
+
+
+                    <h2>
+
+                        Expertise that
+                        <strong>strengthens our work.</strong>
+
+                    </h2>
+
+
+                    <p>
+
+                        We work with professionals and subject
+                        matter experts who provide knowledge,
+                        technical guidance and specialised
+                        support across our programmes.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="resource-grid">
+
+
+                    <!-- RESOURCE PERSON 01 -->
+
+                    <article class="resource-card reveal">
+
+                        <div class="resource-image">
+
+                            <img
+                                src="images/druche.jpeg"
+                                alt="Dr Uche Nwokwu"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <h3>
+                            Dr Uche Nwokwu
+                        </h3>
+
+
+                        <p>
+                            NCCP / Federal Ministry of Health, Abuja
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- RESOURCE PERSON 02 -->
+
+                    <article class="resource-card reveal">
+
+                        <div class="resource-image">
+
+                            <img
+                                src="images/profusmanmalami.jpeg"
+                                alt="Prof. Usman Malami"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <h3>
+                            Prof. Usman Malami
+                        </h3>
+
+
+                        <p>
+                            The Director General, Nigerian Institute for
+                            Cancer Research and Treatment (NICRAT)
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- RESOURCE PERSON 03 -->
+
+                    <article class="resource-card reveal">
+
+                        <div class="resource-image">
+
+                            <img
+                                src="images/profsaleh.jpeg"
+                                alt="Prof. Saleh Yuguda"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <h3>
+                            Prof. Saleh Yuguda
+                        </h3>
+
+
+                        <p>
+                            The Director General, Nigeria Institute for
+                            Cancer Research and Treatment (NICRAT)
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- RESOURCE PERSON 04 -->
+
+                    <article class="resource-card reveal">
+
+                        <div class="resource-image">
+
+                            <img
+                                src="images/profumonisi.jpeg"
+                                alt="Prof. Abidemi Omonisi"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <h3>
+                            Prof. Abidemi Omonisi
+                        </h3>
+
+
+                        <p>
+                            President / CEO, Nigerian Cancer Society (NCS)
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- RESOURCE PERSON 05 -->
+
+                    <article class="resource-card reveal">
+
+                        <div class="resource-image">
+
+                            <img
+                                src="images/dribrahimjalo.jpeg"
+                                alt="Dr. Ibrahim Jalo Daudu"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <h3>
+                            Dr. Ibrahim Jalo Daudu
+                            (MBBS, MTrop Med)
+                        </h3>
+
+
+                        <p>
+                            Federal Permanent Secretary (RTD)
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- RESOURCE PERSON 06 -->
+
+                    <article class="resource-card reveal">
+
+                        <div class="resource-image">
+
+                            <img
+                                src="images/drsanniemmanuel.jpeg"
+                                alt="Dr. Sanni Emmanuel Oladipo"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <h3>
+                            Dr. Sanni Emmanuel Oladipo
+                            (MBBS, MWACP-LAB MEDICINE, FMCPATH)
+                        </h3>
+
+
+                        <p>
+                            Consultant Haematologist and Lecturer,
+                            College of Health Sciences,
+                            Nile University of Nigeria
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- RESOURCE PERSON 07 -->
+
+                    <article class="resource-card reveal">
+
+                        <div class="resource-image">
+
+                            <img
+                                src="images/draminumagashi.jpeg"
+                                alt="Dr. Aminu Magashi Garba"
+                                loading="lazy">
+
+                        </div>
+
+
+                        <h3>
+                            Dr. Aminu Magashi Garba
+                        </h3>
+
+
+                        <p>
+                            Founder / Coordinator of African Health
+                            Budget Network (AHBN)
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             BOARD OF DIRECTORS
+        ================================================== -->
+
+        <section class="board-section">
+
+            <div class="container">
+
+
+                <div class="section-heading reveal">
+
+                    <div class="eyebrow">
+
+                        <span></span>
+
+                        GOVERNANCE
+
+                    </div>
+
+
+                    <h2>
+
+                        Board of
+                        <strong>Directors.</strong>
+
+                    </h2>
+
+
+                    <p>
+
+                        Our Board of Directors provides
+                        strategic leadership, oversight and
+                        guidance to ensure the foundation
+                        remains accountable to its mission.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="board-list">
+
+
+                    <div class="board-row reveal">
+
+                        <div class="board-name">
+                            Alh Ahmed
+                        </div>
+
+                        <div class="board-designation">
+                            Chairman, Board of Directors
+                        </div>
+
+                    </div>
+
+
+                    <div class="board-row reveal">
+
+                        <div class="board-name">
+                            Alh Ahmed Sajo
+                        </div>
+
+                        <div class="board-designation">
+                            Chairman, Board of Directors
+                        </div>
+
+                    </div>
+
+
+                    <div class="board-row reveal">
+
+                        <div class="board-name">
+                            Alh Abba Adams
+                        </div>
+
+                        <div class="board-designation">
+                            Board Member
+                        </div>
+
+                    </div>
+
+
+                    <div class="board-row reveal">
+
+                        <div class="board-name">
+                            Prof. Inuwa Jafaru
+                        </div>
+
+                        <div class="board-designation">
+                            Board Member
+                        </div>
+
+                    </div>
+
+
+                    <div class="board-row reveal">
+
+                        <div class="board-name">
+                            Dr. Alhassan Umar Adamu
+                        </div>
+
+                        <div class="board-designation">
+                            Board Member
+                        </div>
+
+                    </div>
+
+
+                    <div class="board-row reveal">
+
+                        <div class="board-name">
+                            Dr. Maisaratu A. Bakari
+                        </div>
+
+                        <div class="board-designation">
+                            Board Member
+                        </div>
+
+                    </div>
+
+
+                    <div class="board-row reveal">
+
+                        <div class="board-name">
+                            Lt. Cmdr. Ibrahim Baba-Inna Rtd.
+                        </div>
+
+                        <div class="board-designation">
+                            Board Member
+                        </div>
+
+                    </div>
+
+
+                    <div class="board-row reveal">
+
+                        <div class="board-name">
+                            Hagiya Aishatu Ahmed Jika
+                        </div>
+
+                        <div class="board-designation">
+                            Board Member
+                        </div>
+
+                    </div>
+
+
+                    <div class="board-row reveal">
+
+                        <div class="board-name">
+                            DIG Danmallam Muhammed Rtd.
+                        </div>
+
+                        <div class="board-designation">
+                            Board Member
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             BOARD OF TRUSTEES
+        ================================================== -->
+
+        <section class="board-section alt">
+
+            <div class="container">
+
+
+                <div class="section-heading center reveal">
+
+                    <div class="eyebrow">
+
+                        <span></span>
+
+                        TRUSTEESHIP
+
+                    </div>
+
+
+                    <h2>
+
+                        Board of
+                        <strong>Trustees.</strong>
+
+                    </h2>
+
+
+                    <p>
+
+                        Our trustees provide stewardship,
+                        institutional guidance and long-term
+                        oversight of the foundation.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="trustee-grid">
+
+
+                    <div class="trustee-card reveal">
+
+                        <div class="trustee-number">
+                            01
+                        </div>
+
+                        <div class="trustee-name">
+                            Maimuna Ladi Ibrahim
+                        </div>
+
+                    </div>
+
+
+                    <div class="trustee-card reveal">
+
+                        <div class="trustee-number">
+                            02
+                        </div>
+
+                        <div class="trustee-name">
+                            Engr. Dahiru Muhammed
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ORGANOGRAM
+        ================================================== -->
+
+        <section class="organogram-section">
+
+            <div class="container">
+
+
+                <div class="section-heading reveal">
+
+                    <div class="eyebrow">
+
+                        <span></span>
+
+                        OUR STRUCTURE
+
+                    </div>
+
+
+                    <h2>
+
+                        Organisational
+                        <strong>Structure.</strong>
+
+                    </h2>
+
+
+                    <p>
+
+                        Explore the organisational structure
+                        of 3AM Foundation and how our leadership,
+                        programmes and support functions work
+                        together.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="organogram-upload reveal">
+
+
+                    <!-- ORGANOGRAM PLACEHOLDER -->
+
+                    <div class="organogram-content"
+                        id="organogramPlaceholder">
+
+                        <div class="organogram-icon">
+
+                            <i class="fa-solid fa-sitemap"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Organogram Coming Soon
+                        </h3>
+
+
+                        <p>
+
+                            Upload your official organisational
+                            chart here when it is ready.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ORGANOGRAM IMAGE -->
+
+                    <img
+                        src="images/organogram.jpeg"
+                        alt="3AM Foundation Organogram"
+                        class="organogram-image"
+                        id="organogramImage">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CTA
+        ================================================== -->
+
+        <section class="team-cta">
+
+            <div class="container">
+
+                <div class="cta-box reveal">
+
+
+                    <div class="cta-icon">
+
+                        <i class="fa-solid fa-heart"></i>
+
+                    </div>
+
+
+                    <div class="cta-content">
+
+                        <span>
+                            BE PART OF THE MISSION
+                        </span>
+
+
+                        <h2>
+
+                            There is room for you
+                            <strong>to make a difference.</strong>
+
+                        </h2>
+
+
+                        <p>
+
+                            Become a blood donor, volunteer,
+                            partner or supporter and help
+                            3AM Foundation reach more people
+                            and save more lives.
+
+                        </p>
+
+                    </div>
+
+
+                    <a href="donate-blood.html"
+                        class="cta-action">
+
+                        Donate Blood
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+
+            <div class="footer-main">
+
+
+                <!-- BRAND -->
+
+                <div class="footer-brand">
+
+                    <a href="index.html"
+                        class="footer-logo">
+
+                        <img
+                            src="images/3amlogo.png"
+                            alt="3AM Foundation Logo">
+
+                    </a>
+
+
+                    <p>
+
+                        Aisha Abba Abdullahi Memorial
+                        Foundation (3AM Foundation)
+                        works to strengthen blood access,
+                        promote cancer awareness and create
+                        meaningful community impact.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- QUICK LINKS -->
+
+                <div>
+
+                    <h3 class="footer-title">
+                        Quick Links
+                    </h3>
+
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="about.html">
+                                About Us
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="ourwork.html">
+                                Our Work
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="team.html">
+                                Our Team
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- GET INVOLVED -->
+
+                <div>
+
+                    <h3 class="footer-title">
+                        Get Involved
+                    </h3>
+
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="donate-blood.html">
+                                Donate Blood
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="request-blood.html">
+                                Request Blood
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="supportblood.html">
+                                Support Someone
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="volunteer.html">
+                                Volunteer
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- CONTACT -->
+
+                <div class="footer-contact">
+
+                    <h3 class="footer-title">
+                        Contact
+                    </h3>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Abuja, Nigeria
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        info@3amfoundation.org
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        +234 000 000 0000
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="footer-bottom">
+
+
+                <p class="footer-copy">
+
+                    ©
+                    <span id="currentYear"></span>
+                    3AM Foundation.
+                    All Rights Reserved.
+
+                </p>
+
+
+
+                <div class="footer-socials">
+
+                    <a href="#"
+                        aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        aria-label="LinkedIn">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                        aria-label="X">
+
+                        <i class="fa-brands fa-x-twitter"></i>
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        /* ==================================================
+           CURRENT YEAR
+        ================================================== */
+
+        const currentYear = document.getElementById("currentYear");
+
+        if (currentYear) {
+            currentYear.textContent = new Date().getFullYear();
+        }
+
+
+
+        /* ==================================================
+           MOBILE NAVIGATION
+        ================================================== */
+
+        const mobileMenuToggle =
+            document.getElementById("mobileMenuToggle");
+
+        const mainNav =
+            document.getElementById("mainNav");
+
+        const mobileNavOverlay =
+            document.getElementById("mobileNavOverlay");
+
+
+        function toggleMobileMenu() {
+
+            if (!mainNav ||
+                !mobileNavOverlay ||
+                !mobileMenuToggle) {
+                return;
+            }
+
+            mainNav.classList.toggle("open");
+
+            mobileNavOverlay.classList.toggle("active");
+
+            mobileMenuToggle.classList.toggle("active");
+
+
+            const isOpen =
+                mainNav.classList.contains("open");
+
+
+            mobileMenuToggle.setAttribute(
+                "aria-expanded",
+                isOpen.toString()
+            );
+
+
+            mobileMenuToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
+            );
+        }
+
+
+        if (mobileMenuToggle) {
+
+            mobileMenuToggle.addEventListener(
+                "click",
+                toggleMobileMenu
+            );
+
+        }
+
+
+        if (mobileNavOverlay) {
+
+            mobileNavOverlay.addEventListener(
+                "click",
+                toggleMobileMenu
+            );
+
+        }
+
+
+        document
+            .querySelectorAll(".nav-link")
+            .forEach(function(link) {
+
+                link.addEventListener(
+                    "click",
+                    function() {
+
+                        if (
+                            window.innerWidth <= 800 &&
+                            mainNav &&
+                            mainNav.classList.contains("open")
+                        ) {
+                            toggleMobileMenu();
+                        }
+
+                    }
+                );
+
+            });
+
+
+
+        /* ==================================================
+           SCROLL REVEAL
+        ================================================== */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        if ("IntersectionObserver" in window) {
+
+            const revealObserver =
+                new IntersectionObserver(
+                    function(entries) {
+
+                        entries.forEach(
+                            function(entry) {
+
+                                if (
+                                    entry.isIntersecting
+                                ) {
+
+                                    entry.target
+                                        .classList
+                                        .add("visible");
+
+                                    revealObserver
+                                        .unobserve(
+                                            entry.target
+                                        );
+
+                                }
+
+                            }
+                        );
+
+                    },
+                    {
+                        threshold: 0.12
+                    }
+                );
+
+
+            revealElements.forEach(
+                function(element) {
+
+                    revealObserver.observe(
+                        element
+                    );
+
+                }
+            );
+
+        } else {
+
+            revealElements.forEach(
+                function(element) {
+
+                    element.classList.add("visible");
+
+                }
+            );
+
+        }
+
+
+
+        /* ==================================================
+           ORGANOGRAM IMAGE DETECTION
+        ================================================== */
+
+        const organogramImage =
+            document.getElementById("organogramImage");
+
+
+        const organogramPlaceholder =
+            document.getElementById("organogramPlaceholder");
+
+
+        function showOrganogram() {
+
+            if (
+                !organogramImage ||
+                !organogramPlaceholder
+            ) {
+                return;
+            }
+
+            organogramImage.style.display = "block";
+
+            organogramPlaceholder.style.display = "none";
+        }
+
+
+        function hideOrganogram() {
+
+            if (
+                !organogramImage ||
+                !organogramPlaceholder
+            ) {
+                return;
+            }
+
+            organogramImage.style.display = "none";
+
+            organogramPlaceholder.style.display = "block";
+        }
+
+
+        if (organogramImage) {
+
+            organogramImage.addEventListener(
+                "load",
+                showOrganogram
+            );
+
+
+            organogramImage.addEventListener(
+                "error",
+                hideOrganogram
+            );
+
+
+            /*
+             * Handles the situation where the browser has
+             * already loaded the image before the event listener
+             * was attached.
+             */
+
+            if (
+                organogramImage.complete &&
+                organogramImage.naturalWidth > 0
+            ) {
+                showOrganogram();
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
