@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donate Blood | 3AM Foundation</title>
+
+
+    <!-- =========================
+         CSS
+    ========================== -->
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f7f7;
+            color: #222;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           MAIN SECTION
+        ========================== */
+
+        .donation-section {
+            min-height: 100vh;
+            padding: 60px 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+
+        /* =========================
+           FORM CONTAINER
+        ========================== */
+
+        .form-container {
+            width: 100%;
+            max-width: 700px;
+
+            background: #ffffff;
+
+            padding: 45px;
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 10px 35px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+
+        .small-title {
+            font-size: 13px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            color: #b30000;
+
+            margin-bottom: 10px;
+        }
+
+
+        .form-header h1 {
+            font-size: 38px;
+
+            line-height: 1.2;
+
+            margin-bottom: 12px;
+        }
+
+
+        .form-header p {
+            color: #666;
+
+            font-size: 15px;
+
+            max-width: 500px;
+
+            margin: auto;
+        }
+
+
+        /* =========================
+           FORM SECTIONS
+        ========================== */
+
+        .form-section {
+            margin-bottom: 35px;
+        }
+
+
+        .form-section h2 {
+            font-size: 20px;
+
+            margin-bottom: 20px;
+
+            padding-bottom: 10px;
+
+            border-bottom: 1px solid #eeeeee;
+        }
+
+
+        /* =========================
+           INPUT GROUP
+        ========================== */
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+
+        .input-group > label {
+            display: block;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            margin-bottom: 8px;
+        }
+
+
+        .input-group label span {
+            color: #888;
+
+            font-weight: normal;
+        }
+
+
+        /* =========================
+           INPUTS
+        ========================== */
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        select,
+        textarea {
+
+            width: 100%;
+
+            padding: 14px 15px;
+
+            border: 1px solid #dddddd;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+
+            font-family: inherit;
+
+            outline: none;
+
+            background: #ffffff;
+
+            transition: border 0.2s ease;
+        }
+
+
+        input[type="text"]:focus,
+        input[type="tel"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        textarea:focus {
+
+            border-color: #b30000;
+        }
+
+
+        textarea {
+            resize: vertical;
+
+            min-height: 110px;
+        }
+
+
+        /* =========================
+           RADIO BUTTONS
+        ========================== */
+
+        .radio-group {
+
+            display: flex;
+
+            gap: 25px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .radio-group label {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            font-weight: normal;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           CHECKBOXES
+        ========================== */
+
+        .checkbox-group {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 20px;
+        }
+
+
+        .checkbox-group label {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            font-weight: normal;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           CONSENT
+        ========================== */
+
+        .consent {
+
+            margin-bottom: 25px;
+
+            padding: 15px;
+
+            background: #f9f9f9;
+
+            border-radius: 8px;
+
+            font-size: 13px;
+
+            color: #555;
+        }
+
+
+        .consent label {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 10px;
+
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           SUBMIT BUTTON
+        ========================== */
+
+        button {
+
+            width: 100%;
+
+            padding: 16px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #b30000;
+
+            color: #ffffff;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+        }
+
+
+        button:hover {
+
+            background: #8f0000;
+
+            transform: translateY(-1px);
+        }
+
+
+        button:disabled {
+
+            opacity: 0.6;
+
+            cursor: not-allowed;
+
+            transform: none;
+        }
+
+
+        /* =========================
+           FORM MESSAGE
+        ========================== */
+
+        #formMessage {
+
+            text-align: center;
+
+            margin-top: 18px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            min-height: 20px;
+        }
+
+
+        .success {
+
+            color: #188038;
+        }
+
+
+        .error {
+
+            color: #b30000;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            .donation-section {
+
+                padding: 30px 15px;
+            }
+
+
+            .form-container {
+
+                padding: 30px 20px;
+
+                border-radius: 12px;
+            }
+
+
+            .form-header h1 {
+
+                font-size: 30px;
+            }
+
+
+            .radio-group,
+            .checkbox-group {
+
+                flex-direction: column;
+
+                gap: 12px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         DONATE BLOOD FORM
+    ========================== -->
+
+    <section class="donation-section">
+
+
+        <div class="form-container">
+
+
+            <!-- HEADER -->
+
+            <div class="form-header">
+
+                <p class="small-title">
+                    3AM FOUNDATION
+                </p>
+
+
+                <h1>
+                    Donate Blood
+                </h1>
+
+
+                <p>
+                    Your donation can help save a life.
+                    Join us in the fight against blood cancer.
+                </p>
+
+            </div>
+
+
+
+            <!-- FORM -->
+
+            <form id="bloodDonationForm">
+
+
+                <!-- =========================
+                     PERSONAL INFORMATION
+                ========================== -->
+
+                <div class="form-section">
+
+                    <h2>
+                        Personal Information
+                    </h2>
+
+
+                    <!-- FULL NAME -->
+
+                    <div class="input-group">
+
+                        <label for="fullName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="input-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="input-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- LOCATION -->
+
+                    <div class="input-group">
+
+                        <label for="location">
+                            Location
+                        </label>
+
+                        <input
+                            type="text"
+                            id="location"
+                            name="location"
+                            placeholder="City / State"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================
+                     DONATION INFORMATION
+                ========================== -->
+
+                <div class="form-section">
+
+                    <h2>
+                        Donation Information
+                    </h2>
+
+
+                    <!-- BLOOD GROUP -->
+
+                    <div class="input-group">
+
+                        <label for="bloodGroup">
+                            Blood Group
+                        </label>
+
+
+                        <select
+                            id="bloodGroup"
+                            name="bloodGroup"
+                            required
+                        >
+
+                            <option value="">
+                                Select blood group
+                            </option>
+
+                            <option value="A+">
+                                A+
+                            </option>
+
+                            <option value="A-">
+                                A-
+                            </option>
+
+                            <option value="B+">
+                                B+
+                            </option>
+
+                            <option value="B-">
+                                B-
+                            </option>
+
+                            <option value="AB+">
+                                AB+
+                            </option>
+
+                            <option value="AB-">
+                                AB-
+                            </option>
+
+                            <option value="O+">
+                                O+
+                            </option>
+
+                            <option value="O-">
+                                O-
+                            </option>
+
+                            <option value="Unknown">
+                                I don't know
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- PREVIOUS DONATION -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Have you donated blood before?
+                        </label>
+
+
+                        <div class="radio-group">
+
+                            <label>
+
+                                <input
+                                    type="radio"
+                                    name="previousDonation"
+                                    value="Yes"
+                                    required
+                                >
+
+                                Yes
+
+                            </label>
+
+
+                            <label>
+
+                                <input
+                                    type="radio"
+                                    name="previousDonation"
+                                    value="No"
+                                >
+
+                                No
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- WILLING TO DONATE -->
+
+                    <div class="input-group">
+
+                        <label>
+                            Are you currently willing to donate blood?
+                        </label>
+
+
+                        <div class="radio-group">
+
+                            <label>
+
+                                <input
+                                    type="radio"
+                                    name="willingToDonate"
+                                    value="Yes"
+                                    required
+                                >
+
+                                Yes
+
+                            </label>
+
+
+                            <label>
+
+                                <input
+                                    type="radio"
+                                    name="willingToDonate"
+                                    value="No"
+                                >
+
+                                No
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================
+                     CONTACT PREFERENCE
+                ========================== -->
+
+                <div class="form-section">
+
+                    <h2>
+                        Contact Preference
+                    </h2>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            How would you prefer us to contact you?
+                        </label>
+
+
+                        <div class="checkbox-group">
+
+
+                            <label>
+
+                                <input
+                                    type="checkbox"
+                                    name="contactPreference"
+                                    value="Phone"
+                                >
+
+                                Phone Call
+
+                            </label>
+
+
+                            <label>
+
+                                <input
+                                    type="checkbox"
+                                    name="contactPreference"
+                                    value="WhatsApp"
+                                >
+
+                                WhatsApp
+
+                            </label>
+
+
+                            <label>
+
+                                <input
+                                    type="checkbox"
+                                    name="contactPreference"
+                                    value="Email"
+                                >
+
+                                Email
+
+                            </label>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- MESSAGE -->
+
+                    <div class="input-group">
+
+                        <label for="message">
+
+                            Additional Message
+
+                            <span>
+                                (Optional)
+                            </span>
+
+                        </label>
+
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Tell us anything we should know..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================
+                     CONSENT
+                ========================== -->
+
+                <div class="consent">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            id="consent"
+                            required
+                        >
+
+                        <span>
+                            I agree to be contacted by
+                            3AM Foundation regarding blood
+                            donation and related activities.
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- =========================
+                     SUBMIT
+                ========================== -->
+
+                <button
+                    type="submit"
+                    id="submitButton"
+                >
+
+                    Submit Donation Form
+
+                </button>
+
+
+                <!-- STATUS MESSAGE -->
+
+                <p id="formMessage"></p>
+
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         EMAILJS LIBRARY
+    ================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+
+
+    <!-- =================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script>
+
+        // ================================================
+        // INITIALIZE EMAILJS
+        // ================================================
+
+        emailjs.init({
+            publicKey: "puKTRgVmJv458Fs08"
+        });
+
+
+
+        // ================================================
+        // GET FORM ELEMENTS
+        // ================================================
+
+        const form =
+            document.getElementById("bloodDonationForm");
+
+        const submitButton =
+            document.getElementById("submitButton");
+
+        const formMessage =
+            document.getElementById("formMessage");
+
+
+
+        // ================================================
+        // FORM SUBMISSION
+        // ================================================
+
+        form.addEventListener(
+            "submit",
+            function(event) {
+
+                // Prevent page refresh
+                event.preventDefault();
+
+
+                // Change button
+                submitButton.disabled = true;
+
+                submitButton.textContent =
+                    "Submitting...";
+
+
+                // ============================================
+                // GET FORM DATA
+                // ============================================
+
+                const formData =
+                    new FormData(form);
+
+
+                // Get all selected contact preferences
+
+                const contactPreference =
+                    formData
+                    .getAll("contactPreference")
+                    .join(", ");
+
+
+
+                // ============================================
+                // PREPARE EMAIL DATA
+                // ============================================
+
+                const templateParams = {
+
+                    fullName:
+                        formData.get("fullName"),
+
+                    phone:
+                        formData.get("phone"),
+
+                    email:
+                        formData.get("email"),
+
+                    location:
+                        formData.get("location"),
+
+                    bloodGroup:
+                        formData.get("bloodGroup"),
+
+                    previousDonation:
+                        formData.get("previousDonation"),
+
+                    willingToDonate:
+                        formData.get("willingToDonate"),
+
+                    contactPreference:
+                        contactPreference ||
+                        "Not specified",
+
+                    message:
+                        formData.get("message") ||
+                        "No additional message"
+
+                };
+
+
+
+                // ============================================
+                // SEND EMAIL THROUGH EMAILJS
+                // ============================================
+
+                emailjs.send(
+
+                    "service_igm57xj",
+
+                    "template_9evrx2j",
+
+                    templateParams
+
+                )
+
+
+
+                // ============================================
+                // SUCCESS
+                // ============================================
+
+                .then(function(response) {
+
+                    console.log(
+                        "SUCCESS!",
+                        response.status,
+                        response.text
+                    );
+
+
+                    formMessage.textContent =
+                        "Thank you! Your donation interest has been received.";
+
+                    formMessage.className =
+                        "success";
+
+
+                    // Clear the form
+
+                    form.reset();
+
+
+                    // Restore button
+
+                    submitButton.disabled = false;
+
+                    submitButton.textContent =
+                        "Submit Donation Form";
+
+                })
+
+
+
+                // ============================================
+                // ERROR
+                // ============================================
+
+                .catch(function(error) {
+
+                    console.error(
+                        "EmailJS Error:",
+                        error
+                    );
+
+
+                    formMessage.textContent =
+                        "Something went wrong. Please try again.";
+
+                    formMessage.className =
+                        "error";
+
+
+                    submitButton.disabled = false;
+
+                    submitButton.textContent =
+                        "Submit Donation Form";
+
+                });
+
+            }
+
+        );
+
+    </script>
+
+
+</body>
+
+</html>
