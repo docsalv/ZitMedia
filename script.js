@@ -936,3 +936,79 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
+
+
+
+
+/* ==================================================
+   ABOUT IMAGE CAROUSEL
+================================================== */
+
+const aboutSlides =
+    document.querySelectorAll(".about-slide");
+
+const carouselDots =
+    document.querySelectorAll(".carousel-dot");
+
+let aboutSlideIndex = 0;
+
+
+if (aboutSlides.length > 1) {
+
+    function showAboutSlide(index) {
+
+        aboutSlides.forEach(function(slide) {
+
+            slide.classList.remove("active");
+
+        });
+
+
+        carouselDots.forEach(function(dot) {
+
+            dot.classList.remove("active");
+
+        });
+
+
+        aboutSlides[index]
+            .classList.add("active");
+
+
+        if (carouselDots[index]) {
+
+            carouselDots[index]
+                .classList.add("active");
+
+        }
+
+    }
+
+
+    setInterval(function() {
+
+        aboutSlideIndex =
+            (aboutSlideIndex + 1)
+            % aboutSlides.length;
+
+        showAboutSlide(aboutSlideIndex);
+
+    }, 3000);
+
+
+    /* Allow dots to be clicked */
+
+    carouselDots.forEach(function(dot, index) {
+
+        dot.addEventListener("click", function() {
+
+            aboutSlideIndex = index;
+
+            showAboutSlide(aboutSlideIndex);
+
+        });
+
+    });
+
+}
+
