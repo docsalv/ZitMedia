@@ -22278,3 +22278,492 @@ button {
 }
 
 
+
+/* ==========================================
+   3AM FOUNDATION - GET INVOLVED
+   ========================================== */
+
+.get-involved {
+  --gi-orange: #f47b20;
+  --gi-orange-dark: #d9610d;
+  --gi-dark: #151515;
+  --gi-text: #333333;
+  --gi-light: #f7f7f7;
+  --gi-border: #e5e5e5;
+
+  color: var(--gi-text);
+  background: #fff;
+}
+
+
+/* CONTAINER */
+
+.gi-container {
+  width: min(1150px, 92%);
+  margin: 0 auto;
+}
+
+
+/* HERO */
+
+.gi-hero {
+  background: var(--gi-dark);
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.gi-hero h1 {
+  max-width: 850px;
+  margin: 15px auto;
+  font-size: clamp(38px, 5vw, 68px);
+  line-height: 1.05;
+}
+
+.gi-hero p {
+  max-width: 650px;
+  margin: 20px auto 30px;
+  font-size: 18px;
+  line-height: 1.7;
+  opacity: .85;
+}
+
+
+/* LABEL */
+
+.gi-label {
+  color: var(--gi-orange);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+
+/* BUTTONS */
+
+.gi-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.gi-btn {
+  display: inline-block;
+  padding: 14px 26px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  transition: all .3s ease;
+}
+
+
+/* ORANGE BUTTON */
+
+.gi-btn-primary {
+  background: var(--gi-orange);
+  color: #fff;
+  border: 1px solid var(--gi-orange);
+}
+
+.gi-btn-primary:hover {
+  background: var(--gi-orange-dark);
+  border-color: var(--gi-orange-dark);
+  transform: translateY(-2px);
+}
+
+
+/* OUTLINE */
+
+.gi-btn-outline {
+  border: 1px solid rgba(255,255,255,.5);
+  color: #fff;
+  background: transparent;
+}
+
+.gi-btn-outline:hover {
+  background: #fff;
+  color: var(--gi-dark);
+}
+
+
+/* WHITE BUTTON */
+
+.gi-btn-white {
+  background: #fff;
+  color: var(--gi-orange);
+  border: 1px solid #fff;
+}
+
+.gi-btn-white:hover {
+  background: var(--gi-light);
+  transform: translateY(-2px);
+}
+
+
+/* SECTIONS */
+
+.gi-section {
+  padding: 85px 0;
+}
+
+.gi-light {
+  background: var(--gi-light);
+}
+
+
+/* GENERAL CARDS */
+
+.gi-card,
+.gi-donation-box {
+  max-width: 850px;
+  margin: auto;
+  padding: 50px;
+  border: 1px solid var(--gi-border);
+  background: #fff;
+}
+
+.gi-card h2,
+.gi-donation-box h2 {
+  font-size: 38px;
+  margin: 10px 0 15px;
+  color: var(--gi-dark);
+}
+
+.gi-card p,
+.gi-donation-box p {
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.gi-number {
+  color: var(--gi-orange);
+  font-weight: 800;
+  font-size: 14px;
+}
+
+
+/* SECTION HEADING */
+
+.gi-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 45px;
+}
+
+.gi-heading h2 {
+  font-size: 42px;
+  color: var(--gi-dark);
+  margin: 10px 0;
+}
+
+.gi-heading p {
+  line-height: 1.7;
+}
+
+
+/* SUPPORT GRID */
+
+.gi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.gi-support-card {
+  padding: 30px;
+  background: #fff;
+  border: 1px solid var(--gi-border);
+}
+
+.gi-support-card h3 {
+  margin-top: 0;
+  color: var(--gi-dark);
+}
+
+.gi-support-card p {
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+
+/* BANK DETAILS */
+
+.gi-donation-box {
+  text-align: center;
+}
+
+.gi-bank-details {
+  background: var(--gi-light);
+  padding: 20px;
+  margin: 25px 0;
+  text-align: left;
+}
+
+.gi-bank-details p {
+  margin: 8px 0;
+}
+
+
+/* ==========================================
+   ACTION CARDS
+   ========================================== */
+
+.gi-action-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gi-action-card {
+  display: block;
+  padding: 35px;
+  border: 1px solid var(--gi-border);
+  background: #fff;
+  text-decoration: none;
+  color: var(--gi-text);
+  transition: all .3s ease;
+}
+
+.gi-action-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gi-orange);
+  box-shadow: 0 10px 30px rgba(0,0,0,.07);
+}
+
+.gi-action-card span {
+  color: var(--gi-orange);
+  font-weight: 800;
+}
+
+.gi-action-card h3 {
+  color: var(--gi-dark);
+  font-size: 23px;
+}
+
+.gi-action-card strong {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--gi-orange);
+}
+
+
+/* ==========================================
+   MAJOR PROJECTS
+   ========================================== */
+
+.gi-projects {
+  background: var(--gi-light);
+}
+
+
+/* TWO COLUMN PROJECT */
+
+.gi-project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+
+  background: #fff;
+  border: 1px solid var(--gi-border);
+
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+
+/* TEXT SIDE */
+
+.gi-project-content {
+  padding: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.gi-project h2 {
+  font-size: 36px;
+  color: var(--gi-dark);
+  margin: 10px 0 15px;
+}
+
+.gi-project p {
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+
+/* ==========================================
+   RESPONSIVE IMAGE BOX
+   ========================================== */
+
+.gi-project-image {
+  width: 100%;
+  min-height: 380px;
+  background: #eeeeee;
+  overflow: hidden;
+  position: relative;
+}
+
+.gi-project-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform .5s ease;
+}
+
+.gi-project:hover .gi-project-image img {
+  transform: scale(1.03);
+}
+
+
+/* ALTERNATE PROJECT */
+
+.gi-project-reverse .gi-project-content {
+  order: 2;
+}
+
+.gi-project-reverse .gi-project-image {
+  order: 1;
+}
+
+
+/* PROJECT PARTNER BOX */
+
+.gi-partner-box {
+  margin-top: 50px;
+  padding: 60px 30px;
+  text-align: center;
+
+  background: var(--gi-dark);
+  color: #fff;
+}
+
+.gi-partner-box h2 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.gi-partner-box p {
+  max-width: 650px;
+  margin: 0 auto 25px;
+  line-height: 1.7;
+  opacity: .85;
+}
+
+
+/* FINAL CTA */
+
+.gi-final {
+  background: var(--gi-orange);
+  color: #fff;
+  text-align: center;
+  padding: 90px 0;
+}
+
+.gi-final .gi-label {
+  color: #fff;
+}
+
+.gi-final h2 {
+  font-size: 45px;
+  margin: 12px 0;
+}
+
+.gi-final p {
+  margin-bottom: 30px;
+}
+
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+@media (max-width: 900px) {
+
+  .gi-action-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gi-project {
+    grid-template-columns: 1fr;
+  }
+
+  .gi-project-content {
+    order: 1 !important;
+  }
+
+  .gi-project-image {
+    order: 2 !important;
+    min-height: 320px;
+  }
+
+  .gi-project-image img {
+    min-height: 320px;
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 768px) {
+
+  .gi-hero {
+    padding: 70px 0;
+  }
+
+  .gi-section {
+    padding: 60px 0;
+  }
+
+  .gi-card,
+  .gi-donation-box,
+  .gi-project-content {
+    padding: 30px 22px;
+  }
+
+  .gi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gi-heading h2,
+  .gi-final h2 {
+    font-size: 32px;
+  }
+
+  .gi-card h2,
+  .gi-project h2 {
+    font-size: 30px;
+  }
+
+  .gi-project-image {
+    min-height: 250px;
+  }
+
+  .gi-project-image img {
+    min-height: 250px;
+  }
+
+  .gi-btn {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .gi-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+}
