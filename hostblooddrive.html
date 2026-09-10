@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Host a Blood Drive | 3AM Foundation</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f7f7;
+            color: #222;
+            line-height: 1.6;
+        }
+
+
+        .blood-drive-section {
+            min-height: 100vh;
+            padding: 60px 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+
+        .form-container {
+            width: 100%;
+            max-width: 760px;
+
+            background: #ffffff;
+
+            padding: 45px;
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 10px 35px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+
+        .small-title {
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            color: #b30000;
+
+            margin-bottom: 10px;
+        }
+
+
+        .form-header h1 {
+            font-size: 38px;
+
+            line-height: 1.2;
+
+            margin-bottom: 12px;
+        }
+
+
+        .form-header p {
+            color: #666;
+
+            font-size: 15px;
+
+            max-width: 570px;
+
+            margin: auto;
+        }
+
+
+        /* =========================
+           INTRO BOX
+        ========================== */
+
+        .intro-box {
+            background: #fff7f7;
+
+            border-left: 4px solid #b30000;
+
+            padding: 18px;
+
+            border-radius: 8px;
+
+            margin-bottom: 35px;
+
+            color: #555;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FORM SECTIONS
+        ========================== */
+
+        .form-section {
+            margin-bottom: 35px;
+        }
+
+
+        .form-section h2 {
+            font-size: 20px;
+
+            margin-bottom: 20px;
+
+            padding-bottom: 10px;
+
+            border-bottom: 1px solid #eeeeee;
+        }
+
+
+        /* =========================
+           INPUT GROUP
+        ========================== */
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+
+        .input-group > label {
+            display: block;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            margin-bottom: 8px;
+        }
+
+
+        .input-group label span {
+            color: #888;
+
+            font-weight: normal;
+        }
+
+
+        .required {
+            color: #b30000 !important;
+        }
+
+
+        /* =========================
+           INPUTS
+        ========================== */
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="date"],
+        input[type="time"],
+        input[type="number"],
+        select,
+        textarea {
+
+            width: 100%;
+
+            padding: 14px 15px;
+
+            border: 1px solid #dddddd;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+
+            font-family: inherit;
+
+            outline: none;
+
+            background: #ffffff;
+
+            transition:
+                border 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+
+            border-color: #b30000;
+
+            box-shadow:
+                0 0 0 3px rgba(179, 0, 0, 0.08);
+        }
+
+
+        textarea {
+            resize: vertical;
+
+            min-height: 130px;
+        }
+
+
+        /* =========================
+           TWO COLUMNS
+        ========================== */
+
+        .two-column {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 18px;
+        }
+
+
+        /* =========================
+           RADIO
+        ========================== */
+
+        .radio-group {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+
+        .radio-group label {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            font-weight: normal;
+
+            cursor: pointer;
+
+            padding: 10px 14px;
+
+            border: 1px solid #e1e1e1;
+
+            border-radius: 7px;
+
+            background: #fff;
+
+            transition: 0.2s ease;
+        }
+
+
+        .radio-group label:hover {
+
+            border-color: #b30000;
+        }
+
+
+        input[type="radio"],
+        input[type="checkbox"] {
+
+            accent-color: #b30000;
+        }
+
+
+        /* =========================
+           CHECKBOXES
+        ========================== */
+
+        .checkbox-group {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+
+        .checkbox-group label {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            font-weight: normal;
+
+            cursor: pointer;
+
+            padding: 10px 14px;
+
+            border: 1px solid #e1e1e1;
+
+            border-radius: 7px;
+
+            background: #fff;
+
+            transition: 0.2s ease;
+        }
+
+
+        .checkbox-group label:hover {
+
+            border-color: #b30000;
+        }
+
+
+        /* =========================
+           CONSENT
+        ========================== */
+
+        .consent {
+
+            margin-bottom: 25px;
+
+            padding: 15px;
+
+            background: #f9f9f9;
+
+            border-radius: 8px;
+
+            font-size: 13px;
+
+            color: #555;
+        }
+
+
+        .consent label {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 10px;
+
+            cursor: pointer;
+        }
+
+
+        .consent input {
+
+            margin-top: 4px;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================== */
+
+        button {
+
+            width: 100%;
+
+            padding: 16px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #b30000;
+
+            color: #ffffff;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+        }
+
+
+        button:hover {
+
+            background: #8f0000;
+
+            transform: translateY(-1px);
+        }
+
+
+        button:disabled {
+
+            opacity: 0.6;
+
+            cursor: not-allowed;
+
+            transform: none;
+        }
+
+
+        /* =========================
+           FORM MESSAGE
+        ========================== */
+
+        #formMessage {
+
+            text-align: center;
+
+            margin-top: 18px;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            min-height: 20px;
+        }
+
+
+        .success {
+
+            color: #188038;
+        }
+
+
+        .error {
+
+            color: #b30000;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            .blood-drive-section {
+
+                padding: 30px 15px;
+            }
+
+
+            .form-container {
+
+                padding: 30px 20px;
+
+                border-radius: 12px;
+            }
+
+
+            .form-header h1 {
+
+                font-size: 30px;
+            }
+
+
+            .two-column {
+
+                grid-template-columns: 1fr;
+
+                gap: 0;
+            }
+
+
+            .radio-group,
+            .checkbox-group {
+
+                flex-direction: column;
+
+                gap: 10px;
+            }
+
+
+            .radio-group label,
+            .checkbox-group label {
+
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<section class="blood-drive-section">
+
+
+    <div class="form-container">
+
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <div class="form-header">
+
+            <p class="small-title">
+                3AM FOUNDATION
+            </p>
+
+            <h1>
+                Host a Blood Drive
+            </h1>
+
+            <p>
+                Bring blood donation closer to your community.
+                Partner with 3AM Foundation to organize a blood
+                drive and help save lives.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             INTRO
+        ========================== -->
+
+        <div class="intro-box">
+
+            Whether you are a company, school, religious organization,
+            community group, healthcare institution, association or
+            individual, you can help create an opportunity for people
+            to donate blood and support those who need it.
+
+        </div>
+
+
+
+        <!-- =========================
+             FORM
+        ========================== -->
+
+        <form id="bloodDriveForm">
+
+
+            <!-- =========================
+                 ORGANIZER INFORMATION
+            ========================== -->
+
+            <div class="form-section">
+
+                <h2>
+                    Organizer Information
+                </h2>
+
+
+                <!-- FULL NAME -->
+
+                <div class="input-group">
+
+                    <label for="fullName">
+
+                        Full Name
+
+                        <span class="required">*</span>
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="full_name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- ORGANIZATION -->
+
+                <div class="input-group">
+
+                    <label for="organization">
+
+                        Organization / Group Name
+
+                        <span class="required">*</span>
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="organization"
+                        name="organization"
+                        placeholder="Company, school, church, association, community group, etc."
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <label for="email">
+
+                        Email Address
+
+                        <span class="required">*</span>
+
+                    </label>
+
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <div class="input-group">
+
+                    <label for="phone">
+
+                        Phone / WhatsApp Number
+
+                        <span class="required">*</span>
+
+                    </label>
+
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone or WhatsApp number"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- LOCATION -->
+
+                <div class="input-group">
+
+                    <label for="location">
+
+                        Location
+
+                        <span class="required">*</span>
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="location"
+                        name="location"
+                        placeholder="City / State"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 BLOOD DRIVE DETAILS
+            ========================== -->
+
+            <div class="form-section">
+
+                <h2>
+                    Blood Drive Details
+                </h2>
+
+
+
+                <!-- PROPOSED DATE + TIME -->
+
+                <div class="two-column">
+
+
+                    <div class="input-group">
+
+                        <label for="eventDate">
+
+                            Proposed Date
+
+                            <span class="required">*</span>
+
+                        </label>
+
+
+                        <input
+                            type="date"
+                            id="eventDate"
+                            name="event_date"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="input-group">
+
+                        <label for="eventTime">
+
+                            Proposed Time
+
+                            <span class="required">*</span>
+
+                        </label>
+
+
+                        <input
+                            type="time"
+                            id="eventTime"
+                            name="event_time"
+                            required
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- VENUE -->
+
+                <div class="input-group">
+
+                    <label for="venue">
+
+                        Proposed Venue
+
+                        <span class="required">*</span>
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="venue"
+                        name="venue"
+                        placeholder="Where would you like to host the blood drive?"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- EXPECTED DONORS -->
+
+                <div class="input-group">
+
+                    <label for="expectedDonors">
+
+                        Expected Number of Donors
+
+                        <span class="required">*</span>
+
+                    </label>
+
+
+                    <select
+                        id="expectedDonors"
+                        name="expected_donors"
+                        required
+                    >
+
+                        <option value="">
+                            Select estimated number
+                        </option>
+
+                        <option value="10 - 25">
+                            10 - 25
+                        </option>
+
+                        <option value="26 - 50">
+                            26 - 50
+                        </option>
+
+                        <option value="51 - 100">
+                            51 - 100
+                        </option>
+
+                        <option value="101 - 250">
+                            101 - 250
+                        </option>
+
+                        <option value="251 - 500">
+                            251 - 500
+                        </option>
+
+                        <option value="500+">
+                            500+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- VENUE TYPE -->
+
+                <div class="input-group">
+
+                    <label>
+
+                        Type of Venue
+
+                        <span class="required">*</span>
+
+                    </label>
+
+
+                    <div class="radio-group">
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="venue_type"
+                                value="Indoor"
+                                required
+                            >
+
+                            Indoor
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="venue_type"
+                                value="Outdoor"
+                            >
+
+                            Outdoor
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="venue_type"
+                                value="Both"
+                            >
+
+                            Indoor & Outdoor
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 SUPPORT NEEDED
+            ========================== -->
+
+            <div class="form-section">
+
+                <h2>
+                    Support Needed
+                </h2>
+
+
+                <div class="input-group">
+
+                    <label>
+
+                        What support would you need from 3AM Foundation?
+
+                        <span class="required">*</span>
+
+                    </label>
+
+
+                    <div class="checkbox-group">
+
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                name="support_needed"
+                                value="Blood Collection Team"
+                            >
+
+                            Blood Collection Team
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                name="support_needed"
+                                value="Blood Donation Equipment"
+                            >
+
+                            Blood Donation Equipment
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                name="support_needed"
+                                value="Medical Personnel"
+                            >
+
+                            Medical Personnel
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                name="support_needed"
+                                value="Awareness Materials"
+                            >
+
+                            Awareness Materials
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                name="support_needed"
+                                value="Publicity & Media"
+                            >
+
+                            Publicity & Media
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                name="support_needed"
+                                value="Volunteer Support"
+                            >
+
+                            Volunteer Support
+
+                        </label>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- ADDITIONAL DETAILS -->
+
+                <div class="input-group">
+
+                    <label for="additionalMessage">
+
+                        Tell Us About Your Blood Drive
+
+                        <span class="required">*</span>
+
+                    </label>
+
+
+                    <textarea
+                        id="additionalMessage"
+                        name="additional_message"
+                        placeholder="Tell us about the event, your organization, your target audience, available facilities or anything else that may help us understand your plan..."
+                        required
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================
+                 CONSENT
+            ========================== -->
+
+            <div class="consent">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="consent"
+                        required
+                    >
+
+                    <span>
+
+                        I agree to be contacted by 3AM Foundation
+                        regarding this blood drive enquiry and
+                        related activities.
+
+                    </span>
+
+                </label>
+
+            </div>
+
+
+
+            <!-- =========================
+                 SUBMIT
+            ========================== -->
+
+            <button
+                type="submit"
+                id="submitButton"
+            >
+
+                Submit Blood Drive Request
+
+            </button>
+
+
+            <p id="formMessage"></p>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =================================================
+     EMAILJS
+================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+
+<script>
+
+
+    // ================================================
+    // INITIALIZE EMAILJS
+    // ================================================
+
+    emailjs.init({
+
+        publicKey: "Hx6fUYQKHH-YD3lia"
+
+    });
+
+
+
+    // ================================================
+    // GET FORM ELEMENTS
+    // ================================================
+
+    const form =
+        document.getElementById("bloodDriveForm");
+
+
+    const submitButton =
+        document.getElementById("submitButton");
+
+
+    const formMessage =
+        document.getElementById("formMessage");
+
+
+
+    // ================================================
+    // FORM SUBMISSION
+    // ================================================
+
+    form.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+
+            // ============================================
+            // CHECK SUPPORT OPTIONS
+            // ============================================
+
+            const selectedSupport =
+                document.querySelectorAll(
+                    'input[name="support_needed"]:checked'
+                );
+
+
+            if (selectedSupport.length === 0) {
+
+                formMessage.textContent =
+                    "Please select at least one type of support you need.";
+
+                formMessage.className =
+                    "error";
+
+                return;
+
+            }
+
+
+
+            // ============================================
+            // BUTTON
+            // ============================================
+
+            submitButton.disabled = true;
+
+            submitButton.textContent =
+                "Submitting...";
+
+
+
+            // ============================================
+            // FORM DATA
+            // ============================================
+
+            const formData =
+                new FormData(form);
+
+
+
+            // ============================================
+            // SELECTED SUPPORT
+            // ============================================
+
+            const supportNeeded =
+                formData
+                .getAll("support_needed")
+                .join(", ");
+
+
+
+            // ============================================
+            // PREPARE PARAMETERS
+            // ============================================
+
+            const templateParams = {
+
+                full_name:
+                    formData.get("full_name"),
+
+                organization:
+                    formData.get("organization"),
+
+                email:
+                    formData.get("email"),
+
+                phone:
+                    formData.get("phone"),
+
+                location:
+                    formData.get("location"),
+
+                event_date:
+                    formData.get("event_date"),
+
+                event_time:
+                    formData.get("event_time"),
+
+                venue:
+                    formData.get("venue"),
+
+                expected_donors:
+                    formData.get("expected_donors"),
+
+                venue_type:
+                    formData.get("venue_type"),
+
+                support_needed:
+                    supportNeeded,
+
+                additional_message:
+                    formData.get("additional_message")
+
+            };
+
+
+
+            // ============================================
+            // SEND TO EMAILJS
+            // ============================================
+
+            emailjs.send(
+
+                "service_8upeth8",
+
+                "template_phfjc8d",
+
+                templateParams
+
+            )
+
+
+            // ============================================
+            // SUCCESS
+            // ============================================
+
+            .then(function(response) {
+
+                console.log(
+                    "SUCCESS!",
+                    response.status,
+                    response.text
+                );
+
+
+                formMessage.textContent =
+                    "Thank you! Your blood drive request has been received. Our team will contact you soon.";
+
+                formMessage.className =
+                    "success";
+
+
+                form.reset();
+
+
+                submitButton.disabled = false;
+
+                submitButton.textContent =
+                    "Submit Blood Drive Request";
+
+            })
+
+
+            // ============================================
+            // ERROR
+            // ============================================
+
+            .catch(function(error) {
+
+                console.error(
+                    "EmailJS Error:",
+                    error
+                );
+
+
+                formMessage.textContent =
+                    "Something went wrong. Please try again.";
+
+                formMessage.className =
+                    "error";
+
+
+                submitButton.disabled = false;
+
+                submitButton.textContent =
+                    "Submit Blood Drive Request";
+
+            });
+
+        }
+
+    );
+
+</script>
+
+
+</body>
+
+</html>
