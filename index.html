@@ -3434,13 +3434,12 @@ Sometimes, knowing the right information and ...
     </div>
 
 </section>
-
 <!-- ==================== 8 MONTHS BOOK SECTION ==================== -->
 <section class="eight-months-section" id="eight-months">
 
     <div class="eight-months-container">
 
-        <!-- ==================== BOOK INFORMATION ==================== -->
+        <!-- BOOK INFORMATION -->
         <div class="eight-months-content">
 
             <span class="book-label">A BOOK BY THE FOUNDER</span>
@@ -3487,39 +3486,37 @@ Sometimes, knowing the right information and ...
         <div class="book-covers">
 
             <!-- FRONT COVER -->
-            <div class="book-cover"
-                 onclick="openBookImage('images/8MONTHS COVER 1.jpeg')"
-                 role="button"
-                 tabindex="0"
-                 aria-label="View 8 Months front cover">
+            <a href="images/8MONTHS COVER 1.jpeg"
+               class="book-cover"
+               target="_blank"
+               rel="noopener">
 
                 <img src="images/8MONTHS COVER 1.jpeg"
                      alt="8 Months book front cover">
 
-                <div class="cover-overlay">
+                <span class="cover-label">
                     <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    <span>View Cover</span>
-                </div>
+                    View Cover
+                </span>
 
-            </div>
+            </a>
 
 
             <!-- BACK COVER -->
-            <div class="book-cover"
-                 onclick="openBookImage('images/8MONTHS COVER 2.jpeg')"
-                 role="button"
-                 tabindex="0"
-                 aria-label="View 8 Months back cover">
+            <a href="images/8MONTHS COVER 2.jpeg"
+               class="book-cover"
+               target="_blank"
+               rel="noopener">
 
                 <img src="images/8MONTHS COVER 2.jpeg"
                      alt="8 Months book back cover">
 
-                <div class="cover-overlay">
+                <span class="cover-label">
                     <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    <span>View Cover</span>
-                </div>
+                    View Cover
+                </span>
 
-            </div>
+            </a>
 
         </div>
 
@@ -3528,23 +3525,7 @@ Sometimes, knowing the right information and ...
 </section>
 
 
-<!-- ==================== BOOK IMAGE VIEWER ==================== -->
-<div class="book-image-modal" id="bookImageModal">
-
-    <button class="book-modal-close"
-            onclick="closeBookImage()"
-            aria-label="Close">
-        &times;
-    </button>
-
-    <img id="bookModalImage"
-         src=""
-         alt="8 Months book cover">
-
-</div>
-
-
-<!-- ==================== BOOK SECTION STYLES ==================== -->
+<!-- ==================== STYLES ==================== -->
 <style>
 
 .eight-months-section {
@@ -3555,14 +3536,16 @@ Sometimes, knowing the right information and ...
 .eight-months-container {
     max-width: 1150px;
     margin: auto;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 70px;
 }
 
 
-/* ==================== TEXT AREA ==================== */
+/* ==================== BOOK INFORMATION ==================== */
 
 .eight-months-content {
     flex: 1;
@@ -3571,31 +3554,41 @@ Sometimes, knowing the right information and ...
 
 .book-label {
     display: inline-block;
+
     color: #f47b20;
+
     font-size: 13px;
     font-weight: 700;
+
     letter-spacing: 2px;
+
     margin-bottom: 12px;
 }
 
 .eight-months-content h2 {
     margin: 0 0 12px;
+
     font-size: 48px;
     line-height: 1.1;
+
     color: #111111;
 }
 
 .book-author {
     font-size: 17px;
     line-height: 1.7;
+
     color: #444444;
+
     margin-bottom: 20px;
 }
 
 .book-description {
     font-size: 16px;
     line-height: 1.8;
+
     color: #555555;
+
     margin-bottom: 30px;
 }
 
@@ -3605,19 +3598,27 @@ Sometimes, knowing the right information and ...
 .book-actions {
     display: flex;
     flex-wrap: wrap;
+
     gap: 14px;
 }
 
 .book-btn {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
+
     gap: 9px;
+
     padding: 14px 22px;
+
     border-radius: 6px;
+
     text-decoration: none;
+
     font-size: 14px;
     font-weight: 700;
+
     transition: 0.3s ease;
 }
 
@@ -3646,126 +3647,105 @@ Sometimes, knowing the right information and ...
 
 .book-covers {
     flex: 1;
+
     display: flex;
-    justify-content: center;
+
     align-items: center;
+    justify-content: center;
+
     gap: 25px;
 }
+
+
+/*
+   The book cover is now simply a link.
+   No JavaScript.
+   No modal.
+*/
 
 .book-cover {
     width: 230px;
     height: 325px;
+
     position: relative;
+
+    display: block;
+
     overflow: hidden;
+
     border-radius: 5px;
-    cursor: pointer;
+
     background: #eeeeee;
+
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
-    transition: 0.35s ease;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+    -webkit-tap-highlight-color: transparent;
 }
 
 .book-cover:hover {
     transform: translateY(-8px);
+
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
 }
+
+
+/* BOOK IMAGE */
 
 .book-cover img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+
     display: block;
+
+    object-fit: cover;
+
+    pointer-events: none;
 }
 
 
-/* ==================== HOVER OVERLAY ==================== */
+/* ==================== VIEW COVER LABEL ==================== */
 
-.cover-overlay {
+.cover-label {
     position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.58);
+
+    left: 50%;
+    bottom: 18px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 9px 13px;
+
+    background: rgba(0, 0, 0, 0.72);
+
     color: #ffffff;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    gap: 8px;
-    opacity: 0;
-    transition: 0.3s ease;
-}
-
-.book-cover:hover .cover-overlay {
-    opacity: 1;
-}
-
-.cover-overlay i {
-    font-size: 25px;
-}
-
-.cover-overlay span {
-    font-size: 13px;
-    font-weight: 600;
-}
-
-
-/* ==================== IMAGE MODAL ==================== */
-
-.book-image-modal {
-    position: fixed;
-    inset: 0;
-
-    background: rgba(0, 0, 0, 0.92);
-
-    display: none;
-    align-items: center;
-    justify-content: center;
-
-    padding: 30px;
-
-    z-index: 99999;
-}
-
-.book-image-modal.active {
-    display: flex;
-}
-
-.book-image-modal img {
-    max-width: 90%;
-    max-height: 90vh;
-
-    width: auto;
-    height: auto;
-
-    object-fit: contain;
 
     border-radius: 4px;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
 }
 
-
-/* ==================== CLOSE BUTTON ==================== */
-
-.book-modal-close {
-    position: absolute;
-
-    top: 20px;
-    right: 30px;
-
-    border: none;
-    background: transparent;
-
-    color: #ffffff;
-
-    font-size: 42px;
-    cursor: pointer;
-
-    line-height: 1;
-
-    z-index: 100000;
-}
-
-.book-modal-close:hover {
-    color: #f47b20;
+.book-cover:hover .cover-label {
+    opacity: 1;
 }
 
 
@@ -3775,7 +3755,9 @@ Sometimes, knowing the right information and ...
 
     .eight-months-container {
         flex-direction: column;
+
         text-align: center;
+
         gap: 45px;
     }
 
@@ -3793,13 +3775,18 @@ Sometimes, knowing the right information and ...
 
     .book-covers {
         width: 100%;
+
         gap: 15px;
     }
 
     .book-cover {
         width: 45%;
+
         max-width: 210px;
+
         height: 295px;
+
+        transform: none;
     }
 
 }
@@ -3813,127 +3800,59 @@ Sometimes, knowing the right information and ...
         padding: 65px 15px;
     }
 
+    .eight-months-content h2 {
+        font-size: 35px;
+    }
+
     .book-covers {
-        gap: 12px;
+        gap: 10px;
     }
 
     .book-cover {
+        width: calc(50% - 5px);
+
         height: 245px;
     }
 
-    .eight-months-content h2 {
-        font-size: 35px;
+    /*
+       Keep the View Cover label visible on phones
+       because phones don't have hover.
+    */
+
+    .cover-label {
+        opacity: 1;
+
+        bottom: 10px;
+
+        padding: 7px 9px;
+
+        font-size: 10px;
     }
 
     .book-btn {
         width: 100%;
     }
 
-    .book-image-modal {
-        padding: 15px;
+}
+
+
+/* ==================== VERY SMALL PHONES ==================== */
+
+@media (max-width: 360px) {
+
+    .book-cover {
+        height: 220px;
     }
 
-    .book-image-modal img {
-        max-width: 95%;
-        max-height: 85vh;
-    }
+    .cover-label {
+        font-size: 9px;
 
-    .book-modal-close {
-        top: 10px;
-        right: 18px;
-        font-size: 38px;
+        padding: 6px 7px;
     }
 
 }
 
 </style>
-
-
-<!-- ==================== BOOK SECTION JAVASCRIPT ==================== -->
-<script>
-
-function openBookImage(imageSrc) {
-
-    const modal = document.getElementById("bookImageModal");
-    const modalImage = document.getElementById("bookModalImage");
-
-    /*
-     * Use the EXACT SAME IMAGE FILE
-     * that is already displayed on the page.
-     */
-    modalImage.src = imageSrc;
-
-    modal.classList.add("active");
-
-    document.body.style.overflow = "hidden";
-}
-
-
-function closeBookImage() {
-
-    const modal = document.getElementById("bookImageModal");
-    const modalImage = document.getElementById("bookModalImage");
-
-    modal.classList.remove("active");
-
-    /*
-     * Clear the image after closing.
-     */
-    modalImage.src = "";
-
-    document.body.style.overflow = "";
-
-}
-
-
-/* ==================== CLOSE WHEN CLICKING OUTSIDE ==================== */
-
-const bookModal = document.getElementById("bookImageModal");
-
-if (bookModal) {
-
-    bookModal.addEventListener("click", function(event) {
-
-        if (event.target === bookModal) {
-            closeBookImage();
-        }
-
-    });
-
-}
-
-
-/* ==================== CLOSE WITH ESC ==================== */
-
-document.addEventListener("keydown", function(event) {
-
-    if (event.key === "Escape") {
-        closeBookImage();
-    }
-
-});
-
-
-/* ==================== KEYBOARD ACCESS ==================== */
-
-document.querySelectorAll(".book-cover").forEach(function(cover) {
-
-    cover.addEventListener("keydown", function(event) {
-
-        if (event.key === "Enter" || event.key === " ") {
-
-            event.preventDefault();
-
-            cover.click();
-
-        }
-
-    });
-
-});
-
-</script>
-
 
 <!-- ==================================================
      FINAL CALL TO ACTION
