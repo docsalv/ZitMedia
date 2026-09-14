@@ -3435,6 +3435,420 @@ Sometimes, knowing the right information and ...
 
 </section>
 
+<!-- ==================== 8 MONTHS BOOK SECTION ==================== -->
+<section class="eight-months-section" id="eight-months">
+
+    <div class="eight-months-container">
+
+        <div class="eight-months-content">
+
+            <span class="book-label">A BOOK BY THE FOUNDER</span>
+
+            <h2>8 Months</h2>
+
+            <p class="book-author">
+                Written by <strong>Hum. Huseina Baba-Inna<sub>FIHSD</sub></strong>, Founder of
+                Aisha Abba Abdullahi Memorial Foundation (3AM Foundation)
+            </p>
+
+            <p class="book-description">
+                A powerful story of love, courage, loss and purpose.
+                <strong>8 Months</strong> tells a deeply personal story
+                while shining a light on the realities of blood cancer
+                and the importance of awareness, early detection and support.
+            </p>
+
+            <div class="book-actions">
+
+                <!-- DOWNLOAD BOOK -->
+                <a href="documents/8 Months.pdf"
+                   class="book-btn download-btn"
+                   download>
+                    <i class="fa-solid fa-download"></i>
+                    Download 8 Months
+                </a>
+
+                <!-- VOLUNTEER LINK -->
+                <!-- Replace the href below with your actual volunteer form link -->
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSddK73RfBaNjS3_i4zn3b7RZe8CpChj0S3FUbEvh0quCpxQtQ/viewform"
+                   class="book-btn volunteer-btn"
+                   target="_blank"
+                   rel="noopener">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    Become a Volunteer
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOOK COVERS -->
+        <div class="book-covers">
+
+            <!-- FRONT COVER -->
+            <div class="book-cover front-cover"
+                 onclick="openBookImage('assets/books/8-months-front.jpg')">
+
+                <img src="images/8MONTHS COVER 1.jpeg"
+                     alt="8 Months book front cover">
+
+                <div class="cover-overlay">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <span>View Cover</span>
+                </div>
+
+            </div>
+
+
+            <!-- BACK COVER -->
+            <div class="book-cover back-cover"
+                 onclick="openBookImage('assets/books/8-months-back.jpg')">
+
+                <img src="images/8MONTHS COVER 2.jpeg"
+                     alt="8 Months book back cover">
+
+                <div class="cover-overlay">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    <span>View Cover</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================== BOOK IMAGE VIEWER ==================== -->
+<div class="book-image-modal" id="bookImageModal">
+
+    <button class="book-modal-close"
+            onclick="closeBookImage()"
+            aria-label="Close">
+        &times;
+    </button>
+
+    <img id="bookModalImage"
+         src=""
+         alt="8 Months book cover">
+
+</div>
+
+
+<!-- ==================== BOOK SECTION STYLES ==================== -->
+<style>
+
+.eight-months-section {
+    padding: 90px 20px;
+    background: #ffffff;
+}
+
+.eight-months-container {
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+
+/* TEXT AREA */
+
+.eight-months-content {
+    flex: 1;
+    max-width: 540px;
+}
+
+.book-label {
+    display: inline-block;
+    color: #f47b20;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.eight-months-content h2 {
+    margin: 0 0 12px;
+    font-size: 48px;
+    line-height: 1.1;
+    color: #111111;
+}
+
+.book-author {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #444444;
+    margin-bottom: 20px;
+}
+
+.book-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555555;
+    margin-bottom: 30px;
+}
+
+
+/* BUTTONS */
+
+.book-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.book-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 14px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.download-btn {
+    background: #f47b20;
+    color: #ffffff;
+}
+
+.download-btn:hover {
+    background: #d96512;
+    transform: translateY(-2px);
+}
+
+.volunteer-btn {
+    background: #111111;
+    color: #ffffff;
+}
+
+.volunteer-btn:hover {
+    background: #333333;
+    transform: translateY(-2px);
+}
+
+
+/* BOOK COVERS */
+
+.book-covers {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.book-cover {
+    width: 230px;
+    height: 325px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+    transition: 0.35s ease;
+    background: #eeeeee;
+}
+
+.book-cover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* HOVER OVERLAY */
+
+.cover-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.58);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.book-cover:hover .cover-overlay {
+    opacity: 1;
+}
+
+.cover-overlay i {
+    font-size: 25px;
+}
+
+.cover-overlay span {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* IMAGE MODAL */
+
+.book-image-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    z-index: 99999;
+}
+
+.book-image-modal.active {
+    display: flex;
+}
+
+.book-image-modal img {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.book-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 42px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .eight-months-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 45px;
+    }
+
+    .eight-months-content {
+        max-width: 650px;
+    }
+
+    .eight-months-content h2 {
+        font-size: 40px;
+    }
+
+    .book-actions {
+        justify-content: center;
+    }
+
+    .book-covers {
+        width: 100%;
+        gap: 15px;
+    }
+
+    .book-cover {
+        width: 45%;
+        max-width: 210px;
+        height: 295px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .eight-months-section {
+        padding: 65px 15px;
+    }
+
+    .book-covers {
+        gap: 12px;
+    }
+
+    .book-cover {
+        height: 245px;
+    }
+
+    .eight-months-content h2 {
+        font-size: 35px;
+    }
+
+    .book-btn {
+        width: 100%;
+    }
+
+}
+
+</style>
+
+
+<!-- ==================== BOOK SECTION JAVASCRIPT ==================== -->
+<script>
+
+function openBookImage(imageSrc) {
+
+    const modal = document.getElementById("bookImageModal");
+    const modalImage = document.getElementById("bookModalImage");
+
+    modalImage.src = imageSrc;
+    modal.classList.add("active");
+
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeBookImage() {
+
+    const modal = document.getElementById("bookImageModal");
+
+    modal.classList.remove("active");
+
+    document.body.style.overflow = "";
+}
+
+
+/* CLOSE WHEN CLICKING OUTSIDE THE IMAGE */
+
+document.getElementById("bookImageModal").addEventListener("click", function(event) {
+
+    if (event.target === this) {
+        closeBookImage();
+    }
+
+});
+
+
+/* CLOSE WITH ESC KEY */
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+        closeBookImage();
+    }
+
+});
+
+</script>
+
 
 
 <!-- ==================================================

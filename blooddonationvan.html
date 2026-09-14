@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mobile Blood Donation Van | 3AM Foundation</title>
+
+    <meta name="description"
+        content="The 3AM Foundation's proposed Mobile Blood Donation Van Project seeks strategic partnerships and funding to bring safe blood donation closer to communities across Abuja and Nigeria.">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Your Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <style>
+
+        :root {
+            --orange: #f47b20;
+            --black: #111111;
+            --dark: #1d1d1d;
+            --white: #ffffff;
+            --light: #f8f8f8;
+            --text: #555555;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background: #ffffff;
+        }
+
+
+        /* ================================
+           HERO
+        ================================= */
+
+        .mobile-blood-hero {
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, .72),
+                    rgba(0, 0, 0, .72)
+                ),
+                url("images/mobile-blood-van.jpg")
+                center/cover no-repeat;
+
+            padding: 120px 20px 100px;
+
+            text-align: center;
+
+            color: #ffffff;
+        }
+
+        .mobile-blood-hero-content {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .mobile-blood-hero span {
+            color: var(--orange);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .mobile-blood-hero h1 {
+            font-size: 50px;
+            line-height: 1.15;
+            margin: 18px 0;
+        }
+
+        .mobile-blood-hero p {
+            max-width: 760px;
+            margin: auto;
+            font-size: 18px;
+            color: #eeeeee;
+        }
+
+
+        /* ================================
+           GENERAL
+        ================================= */
+
+        .mobile-section {
+            padding: 80px 20px;
+        }
+
+        .mobile-container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section-heading {
+            max-width: 760px;
+            margin: 0 auto 45px;
+            text-align: center;
+        }
+
+        .section-heading span {
+            color: var(--orange);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            color: var(--black);
+            font-size: 38px;
+            line-height: 1.2;
+            margin: 10px 0 15px;
+        }
+
+        .section-heading p {
+            color: #666666;
+        }
+
+
+        /* ================================
+           PROJECT BUDGET HERO
+        ================================= */
+
+        .project-budget {
+            background: var(--black);
+            color: #ffffff;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .project-budget h2 {
+            font-size: 20px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .budget-amount {
+            color: var(--orange);
+            font-size: 45px;
+            font-weight: 800;
+            margin: 10px 0;
+        }
+
+        .project-budget p {
+            margin: 5px auto;
+            color: #dddddd;
+        }
+
+
+        /* ================================
+           INTRO
+        ================================= */
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            color: var(--black);
+            font-size: 35px;
+            margin-top: 0;
+        }
+
+        .intro-text p {
+            margin-bottom: 18px;
+        }
+
+        .mission-box {
+            background: var(--light);
+            border-left: 5px solid var(--orange);
+            padding: 30px;
+        }
+
+        .mission-box h3 {
+            color: var(--black);
+            margin-top: 0;
+        }
+
+        .mission-box p {
+            margin-bottom: 0;
+        }
+
+
+        /* ================================
+           OBJECTIVES
+        ================================= */
+
+        .objectives {
+            background: var(--light);
+        }
+
+        .objective-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .objective-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 6px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .06);
+        }
+
+        .objective-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--orange);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 18px;
+        }
+
+        .objective-card h3 {
+            color: var(--black);
+            margin: 0 0 10px;
+        }
+
+
+        /* ================================
+           OUTREACH AREAS
+        ================================= */
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            background: var(--light);
+            padding: 30px;
+            text-align: center;
+            border-radius: 6px;
+        }
+
+        .service-card i {
+            color: var(--orange);
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: var(--black);
+            margin: 0 0 10px;
+            font-size: 19px;
+        }
+
+
+        /* ================================
+           BUDGET TABLE
+        ================================= */
+
+        .budget-table-wrapper {
+            overflow-x: auto;
+        }
+
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+        }
+
+        .budget-table th,
+        .budget-table td {
+            padding: 16px;
+            border-bottom: 1px solid #e5e5e5;
+            text-align: left;
+        }
+
+        .budget-table th {
+            background: var(--black);
+            color: #ffffff;
+        }
+
+        .budget-table td:last-child,
+        .budget-table th:last-child {
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .budget-total {
+            background: #fff5ed;
+            font-weight: 800;
+            color: var(--black);
+        }
+
+        .budget-total td:last-child {
+            color: var(--orange);
+        }
+
+
+        /* ================================
+           FUNDING FOCUS
+        ================================= */
+
+        .vehicle-highlight {
+            background: #fff5ed;
+            border: 1px solid #f4c39c;
+            padding: 35px;
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .vehicle-highlight h3 {
+            margin: 0 0 8px;
+            color: var(--black);
+            font-size: 25px;
+        }
+
+        .vehicle-highlight p {
+            margin: 0;
+        }
+
+        .vehicle-price {
+            color: var(--orange);
+            font-size: 35px;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+
+        /* ================================
+           LOCATIONS
+        ================================= */
+
+        .locations {
+            background: var(--light);
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .location-card {
+            background: #ffffff;
+            padding: 25px 18px;
+            text-align: center;
+            border-radius: 6px;
+        }
+
+        .location-card i {
+            color: var(--orange);
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .location-card h3 {
+            color: var(--black);
+            font-size: 17px;
+            margin: 0;
+        }
+
+
+        /* ================================
+           PARTNERSHIP
+        ================================= */
+
+        .partnership {
+            background: var(--black);
+            color: #ffffff;
+        }
+
+        .partnership .section-heading h2 {
+            color: #ffffff;
+        }
+
+        .partnership .section-heading p {
+            color: #cccccc;
+        }
+
+        .partnership-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .partner-card {
+            background: #222222;
+            padding: 30px;
+            border: 1px solid #333333;
+        }
+
+        .partner-card i {
+            color: var(--orange);
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .partner-card h3 {
+            color: #ffffff;
+            margin: 0 0 10px;
+        }
+
+        .partner-card p {
+            color: #cccccc;
+            font-size: 15px;
+        }
+
+
+        /* ================================
+           BENEFITS
+        ================================= */
+
+        .benefits {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .benefit {
+            display: flex;
+            gap: 18px;
+            padding: 18px 0;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .benefit i {
+            color: var(--orange);
+            margin-top: 5px;
+        }
+
+        .benefit strong {
+            color: var(--black);
+        }
+
+
+        /* ================================
+           NAMING
+        ================================= */
+
+        .naming-box {
+            background: #fff5ed;
+            border: 1px solid #f4c39c;
+            padding: 40px;
+            text-align: center;
+            margin-top: 45px;
+        }
+
+        .naming-box i {
+            color: var(--orange);
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .naming-box h3 {
+            color: var(--black);
+            font-size: 26px;
+            margin: 5px 0 10px;
+        }
+
+
+        /* ================================
+           IMPACT
+        ================================= */
+
+        .impact {
+            background: var(--light);
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .impact-card {
+            background: #ffffff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .impact-card i {
+            color: var(--orange);
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .impact-card h3 {
+            color: var(--black);
+            margin: 0 0 10px;
+        }
+
+
+        /* ================================
+           CTA
+        ================================= */
+
+        .mobile-cta {
+            background: var(--orange);
+            color: #ffffff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .mobile-cta h2 {
+            font-size: 38px;
+            margin: 0 0 15px;
+        }
+
+        .mobile-cta p {
+            max-width: 720px;
+            margin: 0 auto 30px;
+            font-size: 17px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 14px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: .3s ease;
+        }
+
+        .cta-btn.dark {
+            background: var(--black);
+            color: #ffffff;
+        }
+
+        .cta-btn.white {
+            background: #ffffff;
+            color: var(--black);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+        }
+
+
+        /* ================================
+           RESPONSIVE
+        ================================= */
+
+        @media (max-width: 900px) {
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .location-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .partnership-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .impact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .vehicle-highlight {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            .mobile-blood-hero {
+                padding: 90px 20px 75px;
+            }
+
+            .mobile-blood-hero h1 {
+                font-size: 37px;
+            }
+
+            .section-heading h2 {
+                font-size: 30px;
+            }
+
+            .objective-grid,
+            .service-grid,
+            .partnership-grid,
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .location-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .budget-amount {
+                font-size: 34px;
+            }
+
+            .vehicle-price {
+                font-size: 30px;
+            }
+
+            .naming-box {
+                padding: 30px 20px;
+            }
+
+            .mobile-cta h2 {
+                font-size: 30px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="mobile-blood-hero">
+
+    <div class="mobile-blood-hero-content">
+
+        <span>
+            3AM Foundation Initiative
+        </span>
+
+        <h1>
+            Proposed Mobile Blood Donation Van
+        </h1>
+
+        <p>
+            Taking voluntary blood donation closer to the people,
+            one community at a time.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROJECTED INVESTMENT
+========================================================= -->
+
+<section class="project-budget">
+
+    <h2>
+        Projected Project Investment
+    </h2>
+
+    <div class="budget-amount">
+        ₦120,000,000
+    </div>
+
+    <p>
+        One Hundred and Twenty Million Nigerian Naira Only
+    </p>
+
+    <p>
+        Proposed Deployment: Abuja and surrounding communities,
+        with potential for wider expansion.
+    </p>
+
+</section>
+
+
+
+<!-- =========================================================
+     EXECUTIVE SUMMARY
+========================================================= -->
+
+<section class="mobile-section">
+
+    <div class="mobile-container">
+
+        <div class="intro-grid">
+
+            <div class="intro-text">
+
+                <span style="
+                    color:#f47b20;
+                    font-size:13px;
+                    font-weight:700;
+                    letter-spacing:2px;
+                ">
+                    THE VISION
+                </span>
+
+                <h2>
+                    Bringing Blood Donation Closer to the People
+                </h2>
+
+                <p>
+                    The Aisha Abba Abdullahi Memorial Foundation
+                    (3AM Foundation) is seeking strategic partners,
+                    corporate sponsors, philanthropists and
+                    organizations to support the acquisition and
+                    deployment of a fully equipped Mobile Blood
+                    Donation Van.
+                </p>
+
+                <p>
+                    The mobile unit will enable the Foundation and
+                    its partners to take organized blood donation
+                    campaigns directly to communities, workplaces,
+                    schools, religious institutions, markets,
+                    corporate organizations and public events.
+                </p>
+
+                <p>
+                    Rather than waiting for willing donors to visit
+                    a fixed facility, the mobile blood donation unit
+                    will help bring the opportunity to donate blood
+                    closer to them.
+                </p>
+
+            </div>
+
+
+            <div class="mission-box">
+
+                <h3>
+                    Our Mission
+                </h3>
+
+                <p>
+                    To make voluntary blood donation more accessible
+                    by creating a mobile platform capable of
+                    supporting organized blood collection campaigns
+                    across Abuja and, eventually, other parts of
+                    Nigeria.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROJECT OBJECTIVES
+========================================================= -->
+
+<section class="mobile-section objectives">
+
+    <div class="mobile-container">
+
+        <div class="section-heading">
+
+            <span>
+                What We Plan To Achieve
+            </span>
+
+            <h2>
+                Project Objectives
+            </h2>
+
+            <p>
+                The Mobile Blood Donation Van will serve as a
+                flexible platform for expanding voluntary blood
+                donation and community engagement.
+            </p>
+
+        </div>
+
+
+        <div class="objective-grid">
+
+
+            <div class="objective-card">
+
+                <div class="objective-icon">
+                    <i class="fa-solid fa-truck-medical"></i>
+                </div>
+
+                <h3>
+                    Mobile Blood Collection
+                </h3>
+
+                <p>
+                    Create a dedicated mobile environment for
+                    organized blood donation campaigns in
+                    different locations.
+                </p>
+
+            </div>
+
+
+
+            <div class="objective-card">
+
+                <div class="objective-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <h3>
+                    Reach More Communities
+                </h3>
+
+                <p>
+                    Take blood donation opportunities closer to
+                    communities and populations that may have
+                    limited access to fixed donation centres.
+                </p>
+
+            </div>
+
+
+
+            <div class="objective-card">
+
+                <div class="objective-icon">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+
+                <h3>
+                    Corporate Blood Drives
+                </h3>
+
+                <p>
+                    Enable companies and institutions to host
+                    convenient blood donation drives directly
+                    at their premises.
+                </p>
+
+            </div>
+
+
+
+            <div class="objective-card">
+
+                <div class="objective-icon">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </div>
+
+                <h3>
+                    Increase Awareness
+                </h3>
+
+                <p>
+                    Combine blood donation campaigns with
+                    community education and awareness activities.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     OUTREACH
+========================================================= -->
+
+<section class="mobile-section">
+
+    <div class="mobile-container">
+
+        <div class="section-heading">
+
+            <span>
+                Mobile Outreach
+            </span>
+
+            <h2>
+                Where the Van Can Serve
+            </h2>
+
+            <p>
+                The mobile unit will provide a flexible platform
+                for blood donation campaigns and community
+                engagement.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+
+            <div class="service-card">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <h3>
+                    Schools & Universities
+                </h3>
+
+                <p>
+                    Organize youth-focused blood donation and
+                    awareness campaigns.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                <h3>
+                    Corporate Organizations
+                </h3>
+
+                <p>
+                    Bring blood donation drives directly to
+                    workplaces and business communities.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <i class="fa-solid fa-mosque"></i>
+
+                <h3>
+                    Faith Communities
+                </h3>
+
+                <p>
+                    Support organized donation drives through
+                    churches, mosques and other faith communities.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <i class="fa-solid fa-store"></i>
+
+                <h3>
+                    Markets & Communities
+                </h3>
+
+                <p>
+                    Reach large populations through strategically
+                    organized community campaigns.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <h3>
+                    Public Events
+                </h3>
+
+                <p>
+                    Provide blood donation opportunities at
+                    approved public events and campaigns.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-card">
+
+                <i class="fa-solid fa-people-group"></i>
+
+                <h3>
+                    Community Outreach
+                </h3>
+
+                <p>
+                    Take blood donation education and recruitment
+                    campaigns directly into communities.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     BUDGET
+========================================================= -->
+
+<section class="mobile-section objectives">
+
+    <div class="mobile-container">
+
+        <div class="section-heading">
+
+            <span>
+                Projected Investment
+            </span>
+
+            <h2>
+                Preliminary Budget
+            </h2>
+
+            <p>
+                The following is a preliminary estimate for the
+                acquisition, customization, equipment and
+                deployment of the proposed mobile unit.
+            </p>
+
+        </div>
+
+
+        <div class="budget-table-wrapper">
+
+            <table class="budget-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Project Component
+                        </th>
+
+                        <th>
+                            Estimated Cost
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <tr>
+
+                        <td>
+                            <strong>
+                                Specialized Mobile Blood Donation Vehicle
+                            </strong>
+                        </td>
+
+                        <td>
+                            <strong>
+                                ₦90,000,000
+                            </strong>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Medical Interior Conversion & Installation
+                        </td>
+
+                        <td>
+                            ₦8,000,000
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Blood Collection & Medical Equipment
+                        </td>
+
+                        <td>
+                            ₦7,000,000
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Refrigeration & Cold-Chain System
+                        </td>
+
+                        <td>
+                            ₦4,000,000
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Power Backup / Inverter System
+                        </td>
+
+                        <td>
+                            ₦2,500,000
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            ICT, Communication & Data Systems
+                        </td>
+
+                        <td>
+                            ₦1,500,000
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Branding & Public Awareness Materials
+                        </td>
+
+                        <td>
+                            ₦1,000,000
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Licensing, Registration & Professional Consultancy
+                        </td>
+
+                        <td>
+                            ₦2,000,000
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Initial Deployment & Staff Orientation
+                        </td>
+
+                        <td>
+                            ₦4,000,000
+                        </td>
+
+                    </tr>
+
+
+                    <tr class="budget-total">
+
+                        <td>
+                            GRAND TOTAL
+                        </td>
+
+                        <td>
+                            ₦120,000,000
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- VEHICLE FUNDING HIGHLIGHT -->
+
+        <div class="vehicle-highlight">
+
+            <div>
+
+                <h3>
+                    The Core Funding Need
+                </h3>
+
+                <p>
+                    The proposed specialized mobile blood donation
+                    vehicle represents the largest component of
+                    the project investment.
+                </p>
+
+            </div>
+
+            <div class="vehicle-price">
+                ₦90 Million
+            </div>
+
+        </div>
+
+
+        <p style="
+            margin-top:20px;
+            text-align:center;
+        ">
+
+            <strong>Note:</strong>
+            The budget is a preliminary project estimate and will
+            be subject to detailed vehicle specifications,
+            medical equipment requirements, regulatory approvals,
+            procurement processes and professional quotations.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     LOCATIONS
+========================================================= -->
+
+<section class="mobile-section locations">
+
+    <div class="mobile-container">
+
+        <div class="section-heading">
+
+            <span>
+                Community Reach
+            </span>
+
+            <h2>
+                Taking the Campaign Where People Are
+            </h2>
+
+        </div>
+
+
+        <div class="location-grid">
+
+
+            <div class="location-card">
+
+                <i class="fa-solid fa-school"></i>
+
+                <h3>
+                    Schools
+                </h3>
+
+            </div>
+
+
+            <div class="location-card">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                <h3>
+                    Workplaces
+                </h3>
+
+            </div>
+
+
+            <div class="location-card">
+
+                <i class="fa-solid fa-mosque"></i>
+
+                <h3>
+                    Faith Communities
+                </h3>
+
+            </div>
+
+
+            <div class="location-card">
+
+                <i class="fa-solid fa-shop"></i>
+
+                <h3>
+                    Markets
+                </h3>
+
+            </div>
+
+
+            <div class="location-card">
+
+                <i class="fa-solid fa-house"></i>
+
+                <h3>
+                    Communities
+                </h3>
+
+            </div>
+
+
+            <div class="location-card">
+
+                <i class="fa-solid fa-hospital"></i>
+
+                <h3>
+                    Health Campaigns
+                </h3>
+
+            </div>
+
+
+            <div class="location-card">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <h3>
+                    Public Events
+                </h3>
+
+            </div>
+
+
+            <div class="location-card">
+
+                <i class="fa-solid fa-people-group"></i>
+
+                <h3>
+                    Outreach Programmes
+                </h3>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PARTNERSHIP
+========================================================= -->
+
+<section class="mobile-section partnership">
+
+    <div class="mobile-container">
+
+        <div class="section-heading">
+
+            <span>
+                Partnership Opportunity
+            </span>
+
+            <h2>
+                Help Us Put This Vehicle on the Road
+            </h2>
+
+            <p>
+                We welcome partnerships with organizations and
+                individuals who share our commitment to improving
+                access to safe blood in Nigeria.
+            </p>
+
+        </div>
+
+
+        <div class="partnership-grid">
+
+
+            <div class="partner-card">
+
+                <i class="fa-solid fa-building-columns"></i>
+
+                <h3>
+                    Corporate Sponsors
+                </h3>
+
+                <p>
+                    Support the project through corporate social
+                    responsibility, ESG initiatives or healthcare
+                    impact programmes.
+                </p>
+
+            </div>
+
+
+            <div class="partner-card">
+
+                <i class="fa-solid fa-handshake"></i>
+
+                <h3>
+                    Strategic Partners
+                </h3>
+
+                <p>
+                    Contribute through equipment, technical
+                    expertise, logistics, healthcare services,
+                    professional support or operational assistance.
+                </p>
+
+            </div>
+
+
+            <div class="partner-card">
+
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+
+                <h3>
+                    Philanthropists & Donors
+                </h3>
+
+                <p>
+                    Individuals and philanthropic organizations
+                    can support the vehicle or sponsor specific
+                    project components.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PARTNER BENEFITS
+========================================================= -->
+
+<section class="mobile-section">
+
+    <div class="mobile-container">
+
+        <div class="section-heading">
+
+            <span>
+                Partnership Value
+            </span>
+
+            <h2>
+                What Partners Stand to Gain
+            </h2>
+
+            <p>
+                Supporting the Mobile Blood Donation Van provides
+                an opportunity to create visible and measurable
+                social impact.
+            </p>
+
+        </div>
+
+
+        <div class="benefits">
+
+
+            <div class="benefit">
+
+                <i class="fa-solid fa-check-circle"></i>
+
+                <div>
+
+                    <strong>
+                        Measurable Social Impact:
+                    </strong>
+
+                    Help expand voluntary blood donation and
+                    contribute to a life-saving healthcare
+                    initiative.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="benefit">
+
+                <i class="fa-solid fa-check-circle"></i>
+
+                <div>
+
+                    <strong>
+                        CSR & ESG Recognition:
+                    </strong>
+
+                    Demonstrate your organization's commitment
+                    to healthcare and community development.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="benefit">
+
+                <i class="fa-solid fa-check-circle"></i>
+
+                <div>
+
+                    <strong>
+                        Brand Visibility:
+                    </strong>
+
+                    Appropriate recognition may be provided on
+                    the mobile unit and selected campaign
+                    materials, subject to partnership agreements.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="benefit">
+
+                <i class="fa-solid fa-check-circle"></i>
+
+                <div>
+
+                    <strong>
+                        Community Engagement:
+                    </strong>
+
+                    Create meaningful opportunities for your
+                    organization to engage directly with
+                    communities through health initiatives.
+
+                </div>
+
+            </div>
+
+
+
+            <div class="benefit">
+
+                <i class="fa-solid fa-check-circle"></i>
+
+                <div>
+
+                    <strong>
+                        Long-Term Collaboration:
+                    </strong>
+
+                    Opportunities to support future blood drives,
+                    awareness campaigns, research and other
+                    healthcare initiatives.
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- NAMING OPPORTUNITY -->
+
+        <div class="naming-box">
+
+            <i class="fa-solid fa-award"></i>
+
+            <h3>
+                Mobile Unit Naming & Sponsorship Opportunity
+            </h3>
+
+            <p>
+                Major project sponsors may be considered for
+                appropriate naming or recognition opportunities
+                associated with the mobile blood donation unit,
+                subject to mutual agreement, regulatory
+                requirements and the Foundation's policies.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROJECTED IMPACT
+========================================================= -->
+
+<section class="mobile-section impact">
+
+    <div class="mobile-container">
+
+        <div class="section-heading">
+
+            <span>
+                The Impact We Envision
+            </span>
+
+            <h2>
+                What We Can Achieve Together
+            </h2>
+
+            <p>
+                One mobile unit can become a moving platform for
+                blood donation, awareness and community action.
+            </p>
+
+        </div>
+
+
+        <div class="impact-grid">
+
+
+            <div class="impact-card">
+
+                <i class="fa-solid fa-droplet"></i>
+
+                <h3>
+                    More Blood Donors
+                </h3>
+
+                <p>
+                    Make voluntary blood donation more convenient
+                    and accessible to people across different
+                    communities.
+                </p>
+
+            </div>
+
+
+
+            <div class="impact-card">
+
+                <i class="fa-solid fa-people-arrows"></i>
+
+                <h3>
+                    Stronger Communities
+                </h3>
+
+                <p>
+                    Encourage individuals, organizations and
+                    communities to take collective responsibility
+                    for saving lives.
+                </p>
+
+            </div>
+
+
+
+            <div class="impact-card">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+                <h3>
+                    Lives Saved
+                </h3>
+
+                <p>
+                    Help increase the availability of blood for
+                    patients who need transfusion support.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CALL TO ACTION
+========================================================= -->
+
+<section class="mobile-cta">
+
+    <div class="mobile-container">
+
+        <h2>
+            Let's Put Life-Saving Blood Donation on Wheels
+        </h2>
+
+        <p>
+            We invite corporations, foundations, government
+            agencies, philanthropists and individuals to partner
+            with the 3AM Foundation in making this project
+            a reality.
+        </p>
+
+
+        <div class="cta-buttons">
+
+
+            <a href="https://wa.me/2347030429866"
+               class="cta-btn dark"
+               target="_blank"
+               rel="noopener">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                Discuss on WhatsApp
+
+            </a>
+
+
+
+            <a href="mailto:site.3amfoundation@gmail.com"
+               class="cta-btn white">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                Email the Foundation
+
+            </a>
+
+
+        </div>
+
+
+        <p style="
+            margin-top:25px;
+            font-size:14px;
+        ">
+
+            For partnership proposals, sponsorship discussions,
+            project documentation or further information, please
+            contact the 3AM Foundation.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+</body>
+
+</html>

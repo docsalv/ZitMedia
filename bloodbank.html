@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Proposed Blood Bank Project | 3AM Foundation</title>
+
+    <meta name="description"
+          content="3AM Foundation's proposed Blood Bank Project in Abuja, Nigeria. Partner with us to establish a modern blood bank that will improve access to safe and adequate blood supplies.">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+        :root {
+            --orange: #f47b20;
+            --black: #111111;
+            --dark: #1b1b1b;
+            --light: #f8f8f8;
+            --white: #ffffff;
+            --text: #555555;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: #ffffff;
+            line-height: 1.7;
+        }
+
+        /* HERO */
+
+        .blood-bank-hero {
+            background:
+                linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
+                url("images/blood-bank.jpg") center/cover no-repeat;
+
+            padding: 120px 20px 100px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .blood-bank-hero-content {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .blood-bank-hero span {
+            color: var(--orange);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .blood-bank-hero h1 {
+            font-size: 52px;
+            line-height: 1.15;
+            margin: 18px 0;
+        }
+
+        .blood-bank-hero p {
+            max-width: 760px;
+            margin: auto;
+            font-size: 18px;
+            color: #eeeeee;
+        }
+
+        /* GENERAL */
+
+        .blood-bank-section {
+            padding: 80px 20px;
+        }
+
+        .blood-bank-container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section-heading {
+            max-width: 750px;
+            margin: 0 auto 45px;
+            text-align: center;
+        }
+
+        .section-heading span {
+            color: var(--orange);
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            margin: 10px 0 15px;
+            color: var(--black);
+            font-size: 38px;
+            line-height: 1.2;
+        }
+
+        .section-heading p {
+            color: #666;
+        }
+
+        /* BUDGET SUMMARY */
+
+        .budget-summary {
+            background: var(--black);
+            color: #fff;
+            padding: 55px 30px;
+            text-align: center;
+        }
+
+        .budget-summary h2 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .budget-amount {
+            color: var(--orange);
+            font-size: 45px;
+            font-weight: 800;
+            margin: 10px 0;
+        }
+
+        .budget-summary p {
+            margin: 5px auto;
+            max-width: 700px;
+            color: #dddddd;
+        }
+
+        /* EXECUTIVE SUMMARY */
+
+        .executive-grid {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .executive-text h2 {
+            color: var(--black);
+            font-size: 34px;
+            margin-top: 0;
+        }
+
+        .executive-text p {
+            margin-bottom: 18px;
+        }
+
+        .vision-box {
+            background: var(--light);
+            border-left: 5px solid var(--orange);
+            padding: 30px;
+        }
+
+        .vision-box h3 {
+            color: var(--black);
+            margin-top: 0;
+        }
+
+        .vision-box p {
+            margin-bottom: 0;
+        }
+
+        /* OBJECTIVES */
+
+        .objectives-section {
+            background: var(--light);
+        }
+
+        .objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .objective-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 6px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.06);
+        }
+
+        .objective-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--orange);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 18px;
+        }
+
+        .objective-card h3 {
+            color: var(--black);
+            margin: 0 0 10px;
+        }
+
+        /* BUDGET */
+
+        .budget-table-wrapper {
+            overflow-x: auto;
+        }
+
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+        }
+
+        .budget-table th,
+        .budget-table td {
+            padding: 16px;
+            border-bottom: 1px solid #e5e5e5;
+            text-align: left;
+        }
+
+        .budget-table th {
+            background: var(--black);
+            color: #fff;
+        }
+
+        .budget-table td:last-child,
+        .budget-table th:last-child {
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .budget-total {
+            background: #fff5ed;
+            font-weight: 800;
+            color: var(--black);
+        }
+
+        .budget-total td:last-child {
+            color: var(--orange);
+        }
+
+        /* TARGET */
+
+        .target-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .target-card {
+            text-align: center;
+            background: var(--light);
+            padding: 30px 20px;
+            border-radius: 6px;
+        }
+
+        .target-card i {
+            color: var(--orange);
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .target-card h3 {
+            color: var(--black);
+            font-size: 18px;
+            margin: 0;
+        }
+
+        /* PARTNERSHIP */
+
+        .partnership-section {
+            background: var(--black);
+            color: #fff;
+        }
+
+        .partnership-section .section-heading h2 {
+            color: #fff;
+        }
+
+        .partnership-section .section-heading p {
+            color: #ccc;
+        }
+
+        .partnership-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .partnership-card {
+            background: #222;
+            padding: 30px;
+            border: 1px solid #333;
+        }
+
+        .partnership-card i {
+            color: var(--orange);
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .partnership-card h3 {
+            color: #fff;
+            margin: 0 0 10px;
+        }
+
+        .partnership-card p {
+            color: #ccc;
+            font-size: 15px;
+        }
+
+        /* WHAT PARTNERS GAIN */
+
+        .benefits-list {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .benefit {
+            display: flex;
+            gap: 18px;
+            padding: 18px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .benefit i {
+            color: var(--orange);
+            margin-top: 5px;
+        }
+
+        .benefit strong {
+            color: var(--black);
+        }
+
+        /* NAMING RIGHTS */
+
+        .naming-box {
+            background: #fff5ed;
+            border: 1px solid #f4c39c;
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .naming-box i {
+            color: var(--orange);
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .naming-box h3 {
+            color: var(--black);
+            font-size: 26px;
+            margin: 5px 0 10px;
+        }
+
+        /* PROJECT IMPACT */
+
+        .impact-section {
+            background: var(--light);
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .impact-card {
+            background: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .impact-card i {
+            color: var(--orange);
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .impact-card h3 {
+            color: var(--black);
+            margin: 0 0 10px;
+        }
+
+        /* CTA */
+
+        .blood-bank-cta {
+            background: var(--orange);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .blood-bank-cta h2 {
+            font-size: 38px;
+            margin: 0 0 15px;
+        }
+
+        .blood-bank-cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 17px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 14px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: .3s ease;
+        }
+
+        .cta-btn.dark {
+            background: var(--black);
+            color: #fff;
+        }
+
+        .cta-btn.white {
+            background: #fff;
+            color: var(--black);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            .executive-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .target-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .partnership-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .impact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media (max-width: 650px) {
+
+            .blood-bank-hero {
+                padding: 90px 20px 75px;
+            }
+
+            .blood-bank-hero h1 {
+                font-size: 38px;
+            }
+
+            .section-heading h2 {
+                font-size: 30px;
+            }
+
+            .objectives-grid,
+            .partnership-grid,
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .target-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .budget-amount {
+                font-size: 34px;
+            }
+
+            .naming-box {
+                padding: 30px 20px;
+            }
+
+            .blood-bank-cta h2 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="blood-bank-hero">
+
+    <div class="blood-bank-hero-content">
+
+        <span>3AM Foundation Initiative</span>
+
+        <h1>Proposed Blood Bank Project</h1>
+
+        <p>
+            Building a sustainable blood supply system in Abuja
+            through strategic corporate partnerships, philanthropy,
+            government collaboration and community support.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     BUDGET SUMMARY
+===================================================== -->
+
+<section class="budget-summary">
+
+    <h2>Projected Project Investment</h2>
+
+    <div class="budget-amount">
+        ₦525,000,000
+    </div>
+
+    <p>
+        Five Hundred and Twenty-Five Million Nigerian Naira Only
+    </p>
+
+    <p>
+        Proposed Location: Abuja, Federal Capital Territory, Nigeria
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     EXECUTIVE SUMMARY
+===================================================== -->
+
+<section class="blood-bank-section">
+
+    <div class="blood-bank-container">
+
+        <div class="executive-grid">
+
+            <div class="executive-text">
+
+                <span style="color:#f47b20;
+                             font-size:13px;
+                             font-weight:700;
+                             letter-spacing:2px;">
+                    THE VISION
+                </span>
+
+                <h2>
+                    A Blood Bank Built for Impact
+                </h2>
+
+                <p>
+                    The Aisha Abba Abdullahi Memorial Foundation
+                    (3AM Foundation) is seeking strategic partners,
+                    corporate sponsors, philanthropists, government
+                    agencies and grant organizations to support the
+                    establishment of a modern Blood Bank facility
+                    in Abuja.
+                </p>
+
+                <p>
+                    The proposed facility will help improve access to
+                    safe, screened and adequately stored blood and
+                    blood components for patients, hospitals and
+                    emergency situations across Abuja and surrounding
+                    communities.
+                </p>
+
+                <p>
+                    This initiative is part of the Foundation's broader
+                    commitment to reducing preventable deaths associated
+                    with inadequate access to safe blood.
+                </p>
+
+            </div>
+
+
+            <div class="vision-box">
+
+                <h3>
+                    Our Goal
+                </h3>
+
+                <p>
+                    To establish a sustainable, professionally managed
+                    blood bank that supports hospitals, patients,
+                    emergency responders and communities with safe and
+                    accessible blood supplies.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECT OBJECTIVES
+===================================================== -->
+
+<section class="blood-bank-section objectives-section">
+
+    <div class="blood-bank-container">
+
+        <div class="section-heading">
+
+            <span>What We Plan To Achieve</span>
+
+            <h2>
+                Project Objectives
+            </h2>
+
+            <p>
+                The proposed Blood Bank is designed to create a
+                reliable infrastructure for blood collection,
+                screening, storage and distribution.
+            </p>
+
+        </div>
+
+
+        <div class="objectives-grid">
+
+            <div class="objective-card">
+
+                <div class="objective-icon">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+
+                <h3>
+                    Purpose-Built Facility
+                </h3>
+
+                <p>
+                    Establish a modern medical-grade facility in
+                    Abuja designed to support safe blood collection,
+                    processing, storage and distribution.
+                </p>
+
+            </div>
+
+
+            <div class="objective-card">
+
+                <div class="objective-icon">
+                    <i class="fa-solid fa-vial-circle-check"></i>
+                </div>
+
+                <h3>
+                    Safe Blood Screening
+                </h3>
+
+                <p>
+                    Introduce appropriate modern screening systems
+                    for transfusion-transmissible infections and
+                    other required blood safety procedures.
+                </p>
+
+            </div>
+
+
+            <div class="objective-card">
+
+                <div class="objective-icon">
+                    <i class="fa-solid fa-temperature-low"></i>
+                </div>
+
+                <h3>
+                    Reliable Cold Chain
+                </h3>
+
+                <p>
+                    Provide dependable refrigeration, power backup
+                    and cold-chain infrastructure to protect blood
+                    products from collection to distribution.
+                </p>
+
+            </div>
+
+
+            <div class="objective-card">
+
+                <div class="objective-icon">
+                    <i class="fa-solid fa-truck-medical"></i>
+                </div>
+
+                <h3>
+                    Rapid Distribution
+                </h3>
+
+                <p>
+                    Strengthen access to blood for hospitals,
+                    emergency response units and patients who
+                    urgently need transfusion support.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     TARGET BENEFICIARIES
+===================================================== -->
+
+<section class="blood-bank-section">
+
+    <div class="blood-bank-container">
+
+        <div class="section-heading">
+
+            <span>Who This Project Serves</span>
+
+            <h2>
+                A Facility Designed for People
+            </h2>
+
+        </div>
+
+
+        <div class="target-grid">
+
+            <div class="target-card">
+
+                <i class="fa-solid fa-hospital"></i>
+
+                <h3>
+                    Hospitals
+                </h3>
+
+            </div>
+
+
+            <div class="target-card">
+
+                <i class="fa-solid fa-person-breastfeeding"></i>
+
+                <h3>
+                    Mothers & Children
+                </h3>
+
+            </div>
+
+
+            <div class="target-card">
+
+                <i class="fa-solid fa-car-burst"></i>
+
+                <h3>
+                    Accident & Emergency Cases
+                </h3>
+
+            </div>
+
+
+            <div class="target-card">
+
+                <i class="fa-solid fa-people-group"></i>
+
+                <h3>
+                    Communities
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECT BUDGET
+===================================================== -->
+
+<section class="blood-bank-section objectives-section">
+
+    <div class="blood-bank-container">
+
+        <div class="section-heading">
+
+            <span>Projected Investment</span>
+
+            <h2>
+                Preliminary Budget
+            </h2>
+
+            <p>
+                The following represents the current projected
+                investment required to establish the proposed
+                Blood Bank facility.
+            </p>
+
+        </div>
+
+
+        <div class="budget-table-wrapper">
+
+            <table class="budget-table">
+
+                <thead>
+
+                    <tr>
+                        <th>
+                            Project Component
+                        </th>
+
+                        <th>
+                            Estimated Cost
+                        </th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>
+                            Land Acquisition – Abuja FCT
+                        </td>
+
+                        <td>
+                            ₦150,000,000
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            Architectural, Engineering,
+                            Consultancy & Statutory Approvals
+                        </td>
+
+                        <td>
+                            ₦20,000,000
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            Civil Construction & Facility Development
+                        </td>
+
+                        <td>
+                            ₦120,000,000
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            Laboratory & Blood Bank Equipment
+                        </td>
+
+                        <td>
+                            ₦100,000,000
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            Cold Chain, HVAC & Power Infrastructure
+                        </td>
+
+                        <td>
+                            ₦60,000,000
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            Medical Interior Fittings & Furniture
+                        </td>
+
+                        <td>
+                            ₦25,000,000
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            ICT, Security & Operational Systems
+                        </td>
+
+                        <td>
+                            ₦15,000,000
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            Commissioning, Training & Initial Operations
+                        </td>
+
+                        <td>
+                            ₦20,000,000
+                        </td>
+                    </tr>
+
+
+                    <tr class="budget-total">
+
+                        <td>
+                            GRAND TOTAL
+                        </td>
+
+                        <td>
+                            ₦510,000,000
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <p style="margin-top:20px; text-align:center;">
+            <strong>
+                Note:
+            </strong>
+            The budget is a preliminary project estimate and may be
+            refined following detailed architectural, engineering,
+            regulatory and procurement assessments.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PARTNERSHIP OPPORTUNITY
+===================================================== -->
+
+<section class="blood-bank-section partnership-section">
+
+    <div class="blood-bank-container">
+
+        <div class="section-heading">
+
+            <span>Partner With Us</span>
+
+            <h2>
+                Let's Build This Together
+            </h2>
+
+            <p>
+                We are inviting organizations, corporations,
+                foundations, government agencies, philanthropists
+                and individuals to become part of this vision.
+            </p>
+
+        </div>
+
+
+        <div class="partnership-grid">
+
+            <div class="partnership-card">
+
+                <i class="fa-solid fa-building-columns"></i>
+
+                <h3>
+                    Corporate Funding
+                </h3>
+
+                <p>
+                    Support the construction, equipment,
+                    technology or operational needs of the
+                    proposed Blood Bank through your organization's
+                    CSR or impact investment programme.
+                </p>
+
+            </div>
+
+
+            <div class="partnership-card">
+
+                <i class="fa-solid fa-handshake"></i>
+
+                <h3>
+                    Strategic Partnership
+                </h3>
+
+                <p>
+                    Partner with 3AM Foundation through technical
+                    expertise, healthcare services, equipment,
+                    logistics, training or institutional support.
+                </p>
+
+            </div>
+
+
+            <div class="partnership-card">
+
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+
+                <h3>
+                    Philanthropic Support
+                </h3>
+
+                <p>
+                    Individuals and philanthropic organizations
+                    can contribute toward specific components of
+                    the project or support the overall development.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     WHAT PARTNERS STAND TO GAIN
+===================================================== -->
+
+<section class="blood-bank-section">
+
+    <div class="blood-bank-container">
+
+        <div class="section-heading">
+
+            <span>Partnership Value</span>
+
+            <h2>
+                What Our Partners Stand to Gain
+            </h2>
+
+            <p>
+                Beyond the financial contribution, partners will
+                become part of a lasting healthcare legacy.
+            </p>
+
+        </div>
+
+
+        <div class="benefits-list">
+
+            <div class="benefit">
+
+                <i class="fa-solid fa-check-circle"></i>
+
+                <div>
+                    <strong>Visible Social Impact:</strong>
+                    Demonstrate measurable commitment to saving lives
+                    and improving healthcare access in Nigeria.
+                </div>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <i class="fa-solid fa-check-circle"></i>
+
+                <div>
+                    <strong>CSR & ESG Recognition:</strong>
+                    Position your organization as a partner in a
+                    major community health and life-saving initiative.
+                </div>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <i class="fa-solid fa-check-circle"></i>
+
+                <div>
+                    <strong>Brand Visibility:</strong>
+                    Appropriate recognition across project,
+                    awareness and public engagement materials,
+                    subject to partnership agreements.
+                </div>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <i class="fa-solid fa-check-circle"></i>
+
+                <div>
+                    <strong>Long-Term Partnership:</strong>
+                    Opportunities for continued collaboration in
+                    blood donation, health campaigns, research and
+                    community programmes.
+                </div>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <i class="fa-solid fa-check-circle"></i>
+
+                <div>
+                    <strong>Legacy & Recognition:</strong>
+                    Become part of a landmark healthcare project
+                    designed to create impact beyond the present
+                    generation.
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAMING RIGHTS -->
+
+        <div class="naming-box">
+
+            <i class="fa-solid fa-award"></i>
+
+            <h3>
+                Naming & Legacy Partnership Opportunities
+            </h3>
+
+            <p>
+                Depending on the level and nature of support,
+                major project partners may be considered for
+                appropriate naming, facility recognition or
+                dedicated infrastructure recognition opportunities,
+                subject to mutual agreement, regulatory requirements
+                and the Foundation's policies.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECTED IMPACT
+===================================================== -->
+
+<section class="blood-bank-section impact-section">
+
+    <div class="blood-bank-container">
+
+        <div class="section-heading">
+
+            <span>The Impact We Envision</span>
+
+            <h2>
+                What We Hope to Achieve Together
+            </h2>
+
+            <p>
+                This project is not simply about constructing a
+                building. It is about creating a sustainable system
+                that can save lives for years to come.
+            </p>
+
+        </div>
+
+
+        <div class="impact-grid">
+
+            <div class="impact-card">
+
+                <i class="fa-solid fa-droplet"></i>
+
+                <h3>
+                    Better Blood Availability
+                </h3>
+
+                <p>
+                    Improve access to safe and adequately stored
+                    blood for patients and healthcare facilities.
+                </p>
+
+            </div>
+
+
+            <div class="impact-card">
+
+                <i class="fa-solid fa-shield-heart"></i>
+
+                <h3>
+                    Safer Transfusion
+                </h3>
+
+                <p>
+                    Support appropriate screening, handling and
+                    storage practices for blood products.
+                </p>
+
+            </div>
+
+
+            <div class="impact-card">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+                <h3>
+                    Lives Saved
+                </h3>
+
+                <p>
+                    Help reduce preventable deaths resulting from
+                    delayed or inadequate access to blood.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CALL TO ACTION
+===================================================== -->
+
+<section class="blood-bank-cta">
+
+    <div class="blood-bank-container">
+
+        <h2>
+            Be Part of the Blood Bank Project
+        </h2>
+
+        <p>
+            Whether you are a corporation, government institution,
+            foundation, philanthropist or individual, your support
+            can help transform this vision into a functioning
+            life-saving facility.
+        </p>
+
+        <div class="cta-buttons">
+
+            <a href="https://wa.me/2347030429866"
+               class="cta-btn dark"
+               target="_blank"
+               rel="noopener">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                Discuss on WhatsApp
+
+            </a>
+
+
+            <a href="mailto:site.3amfoundation@gmail.com"
+               class="cta-btn white">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                Email the Foundation
+
+            </a>
+
+        </div>
+
+        <p style="margin-top:25px; font-size:14px;">
+
+            For partnership proposals, funding discussions,
+            sponsorship opportunities or project documentation,
+            please contact the 3AM Foundation.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+</body>
+</html>
