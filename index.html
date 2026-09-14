@@ -3440,6 +3440,7 @@ Sometimes, knowing the right information and ...
 
     <div class="eight-months-container">
 
+        <!-- ==================== BOOK INFORMATION ==================== -->
         <div class="eight-months-content">
 
             <span class="book-label">A BOOK BY THE FOUNDER</span>
@@ -3468,12 +3469,11 @@ Sometimes, knowing the right information and ...
                     Download 8 Months
                 </a>
 
-                <!-- VOLUNTEER LINK -->
-                <!-- Replace the href below with your actual volunteer form link -->
+                <!-- VOLUNTEER -->
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSddK73RfBaNjS3_i4zn3b7RZe8CpChj0S3FUbEvh0quCpxQtQ/viewform"
                    class="book-btn volunteer-btn"
                    target="_blank"
-                   rel="noopener">
+                   rel="noopener noreferrer">
                     <i class="fa-solid fa-hand-holding-heart"></i>
                     Become a Volunteer
                 </a>
@@ -3483,12 +3483,15 @@ Sometimes, knowing the right information and ...
         </div>
 
 
-        <!-- BOOK COVERS -->
+        <!-- ==================== BOOK COVERS ==================== -->
         <div class="book-covers">
 
             <!-- FRONT COVER -->
-            <div class="book-cover front-cover"
-                 onclick="openBookImage('assets/books/8-months-front.jpg')">
+            <div class="book-cover"
+                 onclick="openBookImage('images/8MONTHS COVER 1.jpeg')"
+                 role="button"
+                 tabindex="0"
+                 aria-label="View 8 Months front cover">
 
                 <img src="images/8MONTHS COVER 1.jpeg"
                      alt="8 Months book front cover">
@@ -3502,8 +3505,11 @@ Sometimes, knowing the right information and ...
 
 
             <!-- BACK COVER -->
-            <div class="book-cover back-cover"
-                 onclick="openBookImage('assets/books/8-months-back.jpg')">
+            <div class="book-cover"
+                 onclick="openBookImage('images/8MONTHS COVER 2.jpeg')"
+                 role="button"
+                 tabindex="0"
+                 aria-label="View 8 Months back cover">
 
                 <img src="images/8MONTHS COVER 2.jpeg"
                      alt="8 Months book back cover">
@@ -3556,7 +3562,7 @@ Sometimes, knowing the right information and ...
 }
 
 
-/* TEXT AREA */
+/* ==================== TEXT AREA ==================== */
 
 .eight-months-content {
     flex: 1;
@@ -3594,7 +3600,7 @@ Sometimes, knowing the right information and ...
 }
 
 
-/* BUTTONS */
+/* ==================== BUTTONS ==================== */
 
 .book-actions {
     display: flex;
@@ -3636,7 +3642,7 @@ Sometimes, knowing the right information and ...
 }
 
 
-/* BOOK COVERS */
+/* ==================== BOOK COVERS ==================== */
 
 .book-covers {
     flex: 1;
@@ -3653,9 +3659,9 @@ Sometimes, knowing the right information and ...
     overflow: hidden;
     border-radius: 5px;
     cursor: pointer;
+    background: #eeeeee;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
     transition: 0.35s ease;
-    background: #eeeeee;
 }
 
 .book-cover:hover {
@@ -3671,17 +3677,19 @@ Sometimes, knowing the right information and ...
 }
 
 
-/* HOVER OVERLAY */
+/* ==================== HOVER OVERLAY ==================== */
 
 .cover-overlay {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.58);
     color: #ffffff;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     gap: 8px;
     opacity: 0;
     transition: 0.3s ease;
@@ -3701,16 +3709,20 @@ Sometimes, knowing the right information and ...
 }
 
 
-/* IMAGE MODAL */
+/* ==================== IMAGE MODAL ==================== */
 
 .book-image-modal {
     position: fixed;
     inset: 0;
+
     background: rgba(0, 0, 0, 0.92);
+
     display: none;
     align-items: center;
     justify-content: center;
+
     padding: 30px;
+
     z-index: 99999;
 }
 
@@ -3721,24 +3733,43 @@ Sometimes, knowing the right information and ...
 .book-image-modal img {
     max-width: 90%;
     max-height: 90vh;
+
+    width: auto;
+    height: auto;
+
     object-fit: contain;
+
     border-radius: 4px;
 }
 
+
+/* ==================== CLOSE BUTTON ==================== */
+
 .book-modal-close {
     position: absolute;
+
     top: 20px;
     right: 30px;
+
     border: none;
     background: transparent;
+
     color: #ffffff;
+
     font-size: 42px;
     cursor: pointer;
+
     line-height: 1;
+
+    z-index: 100000;
+}
+
+.book-modal-close:hover {
+    color: #f47b20;
 }
 
 
-/* MOBILE */
+/* ==================== MOBILE ==================== */
 
 @media (max-width: 850px) {
 
@@ -3774,6 +3805,8 @@ Sometimes, knowing the right information and ...
 }
 
 
+/* ==================== SMALL MOBILE ==================== */
+
 @media (max-width: 500px) {
 
     .eight-months-section {
@@ -3796,6 +3829,21 @@ Sometimes, knowing the right information and ...
         width: 100%;
     }
 
+    .book-image-modal {
+        padding: 15px;
+    }
+
+    .book-image-modal img {
+        max-width: 95%;
+        max-height: 85vh;
+    }
+
+    .book-modal-close {
+        top: 10px;
+        right: 18px;
+        font-size: 38px;
+    }
+
 }
 
 </style>
@@ -3809,7 +3857,12 @@ function openBookImage(imageSrc) {
     const modal = document.getElementById("bookImageModal");
     const modalImage = document.getElementById("bookModalImage");
 
+    /*
+     * Use the EXACT SAME IMAGE FILE
+     * that is already displayed on the page.
+     */
     modalImage.src = imageSrc;
+
     modal.classList.add("active");
 
     document.body.style.overflow = "hidden";
@@ -3819,25 +3872,38 @@ function openBookImage(imageSrc) {
 function closeBookImage() {
 
     const modal = document.getElementById("bookImageModal");
+    const modalImage = document.getElementById("bookModalImage");
 
     modal.classList.remove("active");
 
+    /*
+     * Clear the image after closing.
+     */
+    modalImage.src = "";
+
     document.body.style.overflow = "";
+
 }
 
 
-/* CLOSE WHEN CLICKING OUTSIDE THE IMAGE */
+/* ==================== CLOSE WHEN CLICKING OUTSIDE ==================== */
 
-document.getElementById("bookImageModal").addEventListener("click", function(event) {
+const bookModal = document.getElementById("bookImageModal");
 
-    if (event.target === this) {
-        closeBookImage();
-    }
+if (bookModal) {
 
-});
+    bookModal.addEventListener("click", function(event) {
+
+        if (event.target === bookModal) {
+            closeBookImage();
+        }
+
+    });
+
+}
 
 
-/* CLOSE WITH ESC KEY */
+/* ==================== CLOSE WITH ESC ==================== */
 
 document.addEventListener("keydown", function(event) {
 
@@ -3847,8 +3913,26 @@ document.addEventListener("keydown", function(event) {
 
 });
 
-</script>
 
+/* ==================== KEYBOARD ACCESS ==================== */
+
+document.querySelectorAll(".book-cover").forEach(function(cover) {
+
+    cover.addEventListener("keydown", function(event) {
+
+        if (event.key === "Enter" || event.key === " ") {
+
+            event.preventDefault();
+
+            cover.click();
+
+        }
+
+    });
+
+});
+
+</script>
 
 
 <!-- ==================================================
