@@ -764,56 +764,6 @@
     <div class="activities-slider">
 
 
-        <!-- SEPTEMBER -->
-
-        <article class="activity-card featured">
-
-            <div class="activity-image">
-                <img src="images/bloodcancerawareness.jpeg"
-                     alt="Blood Cancer Awareness event" style="object-fit: contain;">
-            </div>
-
-            <div class="activity-content">
-
-                <div class="activity-month">
-                    SEPTEMBER 2026
-                </div>
-
-                <div class="activity-badge">
-                    <i class="fa-solid fa-ribbon"></i>
-                    AWARENESS MONTH
-                </div>
-
-                <h3>
-                    Blood Cancer Awareness Month
-                </h3>
-
-                <p>
-                    September marks Blood Cancer Awareness Month.
-                    3AM Foundation will use the month to raise
-                    awareness, encourage early detection of blood
-                    cancer and promote better understanding within
-                    our communities.
-                </p>
-
-                <div class="activity-event">
-
-                    <i class="fa-solid fa-droplet"></i>
-
-                    <span>
-                        Voluntary Blood Donation Drive
-                    </span>
-
-                </div>
-
-            </div>
-
-            <div class="activity-number">
-                01
-            </div>
-
-        </article>
-
 
 
         <!-- NOVEMBER -->
@@ -851,9 +801,30 @@
 
                     <i class="fa-solid fa-trophy"></i>
 
-                    <span>
-                        3AM Football Tournament — Edition 2
-                    </span>
+                   <a href="https://drive.google.com/drive/folders/1uS8piAfYIcddvnOvuCcwHVzBc4fcTtu5"
+   target="_blank"
+   class="tournament-btn">
+   📸 WATCH PREVIOUS TOURNAMENT PHOTO HIGHLIGHTS
+</a>
+
+<style>
+.tournament-btn {
+  display: inline-block;
+  background: #f47b20;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  animation: blink 1.3s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .55; }
+}
+</style>
 
                 </div>
 
@@ -3524,335 +3495,241 @@ Sometimes, knowing the right information and ...
 
 </section>
 
+<!-- Documents Section -->
+<section class="documents-section">
+    <div class="documents-container">
 
-<!-- ==================== STYLES ==================== -->
+        <div class="documents-header">
+            <span class="documents-label">REMEMBERING AISHA</span>
+            <h2>Tributes & Endorsement</h2>
+            <p>
+                Read heartfelt tributes from Aisha's friends and the official
+                Letter of Endorsement from the Nigerian Cancer Society.
+            </p>
+        </div>
+
+        <div class="documents-grid">
+
+            <!-- PDF 1: Tributes -->
+            <div class="document-card">
+                <div class="document-card-header">
+                    <div>
+                        <span class="document-tag">TRIBUTES</span>
+                        <h3>Tributes from Aisha's Friends</h3>
+                        <p>Heartfelt words from those who knew and loved Aisha.</p>
+                    </div>
+                </div>
+
+                <div class="pdf-viewer">
+                    <iframe 
+                        src="documents/Tributes_From_Aisha_s_Friends.pdf"
+                        title="Tributes from Aisha's Friends"
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <a href="documents/Tributes_From_Aisha_s_Friends.pdf" 
+                   target="_blank" 
+                   class="view-pdf-btn">
+                    View Full PDF ↗
+                </a>
+            </div>
+
+
+            <!-- PDF 2: Nigerian Cancer Society -->
+            <div class="document-card">
+                <div class="document-card-header">
+                    <div>
+                        <span class="document-tag">ENDORSEMENT</span>
+                        <h3>Nigerian Cancer Society</h3>
+                        <p>Official Letter of Endorsement for the Foundation.</p>
+                    </div>
+                </div>
+
+                <div class="pdf-viewer">
+                    <iframe 
+                        src="documents/NCS LETTER OF ENDORSEMENT.pdf"
+                        title="Nigerian Cancer Society Letter of Endorsement"
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <a href="documents/NCS LETTER OF ENDORSEMENT.pdf" 
+                   target="_blank" 
+                   class="view-pdf-btn">
+                    View Full PDF ↗
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
 <style>
+/* ================================
+   DOCUMENTS / PDF SECTION
+================================ */
 
-.eight-months-section {
+.documents-section {
     padding: 90px 20px;
-    background: #ffffff;
+    background: #f8f8f8;
+    font-family: Arial, sans-serif;
 }
 
-.eight-months-container {
-    max-width: 1150px;
-    margin: auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 70px;
+.documents-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-
-/* ==================== BOOK INFORMATION ==================== */
-
-.eight-months-content {
-    flex: 1;
-    max-width: 540px;
+.documents-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
 }
 
-.book-label {
+.documents-label {
     display: inline-block;
-
     color: #f47b20;
-
     font-size: 13px;
     font-weight: 700;
-
     letter-spacing: 2px;
-
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
-.eight-months-content h2 {
-    margin: 0 0 12px;
-
-    font-size: 48px;
-    line-height: 1.1;
-
-    color: #111111;
-}
-
-.book-author {
-    font-size: 17px;
-    line-height: 1.7;
-
-    color: #444444;
-
-    margin-bottom: 20px;
-}
-
-.book-description {
-    font-size: 16px;
-    line-height: 1.8;
-
-    color: #555555;
-
-    margin-bottom: 30px;
-}
-
-
-/* ==================== BUTTONS ==================== */
-
-.book-actions {
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 14px;
-}
-
-.book-btn {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 9px;
-
-    padding: 14px 22px;
-
-    border-radius: 6px;
-
-    text-decoration: none;
-
-    font-size: 14px;
+.documents-header h2 {
+    margin: 0 0 15px;
+    font-size: 38px;
+    color: #111;
     font-weight: 700;
-
-    transition: 0.3s ease;
 }
 
-.download-btn {
-    background: #f47b20;
-    color: #ffffff;
+.documents-header p {
+    margin: 0;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.7;
 }
 
-.download-btn:hover {
-    background: #d96512;
-    transform: translateY(-2px);
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 }
 
-.volunteer-btn {
-    background: #111111;
-    color: #ffffff;
-}
-
-.volunteer-btn:hover {
-    background: #333333;
-    transform: translateY(-2px);
-}
-
-
-/* ==================== BOOK COVERS ==================== */
-
-.book-covers {
-    flex: 1;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 25px;
-}
-
-
-/*
-   The book cover is now simply a link.
-   No JavaScript.
-   No modal.
-*/
-
-.book-cover {
-    width: 230px;
-    height: 325px;
-
-    position: relative;
-
-    display: block;
-
+.document-card {
+    background: #fff;
+    border-radius: 18px;
     overflow: hidden;
-
-    border-radius: 5px;
-
-    background: #eeeeee;
-
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
-
-    text-decoration: none;
-
-    cursor: pointer;
-
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
-
-    -webkit-tap-highlight-color: transparent;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.book-cover:hover {
-    transform: translateY(-8px);
-
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+.document-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
 }
 
+.document-card-header {
+    padding: 25px 25px 20px;
+}
 
-/* BOOK IMAGE */
+.document-tag {
+    display: inline-block;
+    background: #fff1e8;
+    color: #f47b20;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
 
-.book-cover img {
+.document-card h3 {
+    margin: 0 0 7px;
+    font-size: 21px;
+    color: #171717;
+}
+
+.document-card p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* PDF Viewer */
+.pdf-viewer {
+    width: 100%;
+    height: 520px;
+    background: #eee;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.pdf-viewer iframe {
     width: 100%;
     height: 100%;
-
+    border: none;
     display: block;
+}
 
-    object-fit: cover;
+/* Button */
+.view-pdf-btn {
+    display: inline-block;
+    margin: 20px 25px 25px;
+    padding: 13px 22px;
+    background: #f47b20;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
 
-    pointer-events: none;
+.view-pdf-btn:hover {
+    background: #d9640e;
+    transform: translateY(-2px);
 }
 
 
-/* ==================== VIEW COVER LABEL ==================== */
+/* ================================
+   MOBILE
+================================ */
 
-.cover-label {
-    position: absolute;
+@media (max-width: 768px) {
 
-    left: 50%;
-    bottom: 18px;
+    .documents-section {
+        padding: 60px 15px;
+    }
 
-    transform: translateX(-50%);
+    .documents-header h2 {
+        font-size: 30px;
+    }
 
-    display: flex;
+    .documents-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
 
-    align-items: center;
-    justify-content: center;
+    .pdf-viewer {
+        height: 500px;
+    }
 
-    gap: 7px;
+    .document-card-header {
+        padding: 22px 20px 18px;
+    }
 
-    padding: 9px 13px;
-
-    background: rgba(0, 0, 0, 0.72);
-
-    color: #ffffff;
-
-    border-radius: 4px;
-
-    font-size: 12px;
-
-    white-space: nowrap;
-
-    opacity: 0;
-
-    transition: opacity 0.3s ease;
+    .view-pdf-btn {
+        margin: 18px 20px 22px;
+    }
 }
-
-.book-cover:hover .cover-label {
-    opacity: 1;
-}
-
-
-/* ==================== MOBILE ==================== */
-
-@media (max-width: 850px) {
-
-    .eight-months-container {
-        flex-direction: column;
-
-        text-align: center;
-
-        gap: 45px;
-    }
-
-    .eight-months-content {
-        max-width: 650px;
-    }
-
-    .eight-months-content h2 {
-        font-size: 40px;
-    }
-
-    .book-actions {
-        justify-content: center;
-    }
-
-    .book-covers {
-        width: 100%;
-
-        gap: 15px;
-    }
-
-    .book-cover {
-        width: 45%;
-
-        max-width: 210px;
-
-        height: 295px;
-
-        transform: none;
-    }
-
-}
-
-
-/* ==================== SMALL MOBILE ==================== */
-
-@media (max-width: 500px) {
-
-    .eight-months-section {
-        padding: 65px 15px;
-    }
-
-    .eight-months-content h2 {
-        font-size: 35px;
-    }
-
-    .book-covers {
-        gap: 10px;
-    }
-
-    .book-cover {
-        width: calc(50% - 5px);
-
-        height: 245px;
-    }
-
-    /*
-       Keep the View Cover label visible on phones
-       because phones don't have hover.
-    */
-
-    .cover-label {
-        opacity: 1;
-
-        bottom: 10px;
-
-        padding: 7px 9px;
-
-        font-size: 10px;
-    }
-
-    .book-btn {
-        width: 100%;
-    }
-
-}
-
-
-/* ==================== VERY SMALL PHONES ==================== */
-
-@media (max-width: 360px) {
-
-    .book-cover {
-        height: 220px;
-    }
-
-    .cover-label {
-        font-size: 9px;
-
-        padding: 6px 7px;
-    }
-
-}
-
 </style>
+
+
 
 <!-- ==================================================
      FINAL CALL TO ACTION

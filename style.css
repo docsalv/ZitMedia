@@ -22767,3 +22767,333 @@ button {
   }
 
 }
+
+
+
+
+
+.eight-months-section {
+    padding: 90px 20px;
+    background: #ffffff;
+}
+
+.eight-months-container {
+    max-width: 1150px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 70px;
+}
+
+
+/* ==================== BOOK INFORMATION ==================== */
+
+.eight-months-content {
+    flex: 1;
+    max-width: 540px;
+}
+
+.book-label {
+    display: inline-block;
+
+    color: #f47b20;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.eight-months-content h2 {
+    margin: 0 0 12px;
+
+    font-size: 48px;
+    line-height: 1.1;
+
+    color: #111111;
+}
+
+.book-author {
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: #444444;
+
+    margin-bottom: 20px;
+}
+
+.book-description {
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: #555555;
+
+    margin-bottom: 30px;
+}
+
+
+/* ==================== BUTTONS ==================== */
+
+.book-actions {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 14px;
+}
+
+.book-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 14px 22px;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.download-btn {
+    background: #f47b20;
+    color: #ffffff;
+}
+
+.download-btn:hover {
+    background: #d96512;
+    transform: translateY(-2px);
+}
+
+.volunteer-btn {
+    background: #111111;
+    color: #ffffff;
+}
+
+.volunteer-btn:hover {
+    background: #333333;
+    transform: translateY(-2px);
+}
+
+
+/* ==================== BOOK COVERS ==================== */
+
+.book-covers {
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+}
+
+
+/*
+   The book cover is now simply a link.
+   No JavaScript.
+   No modal.
+*/
+
+.book-cover {
+    width: 230px;
+    height: 325px;
+
+    position: relative;
+
+    display: block;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    background: #eeeeee;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+.book-cover:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+
+/* BOOK IMAGE */
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    pointer-events: none;
+}
+
+
+/* ==================== VIEW COVER LABEL ==================== */
+
+.cover-label {
+    position: absolute;
+
+    left: 50%;
+    bottom: 18px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 9px 13px;
+
+    background: rgba(0, 0, 0, 0.72);
+
+    color: #ffffff;
+
+    border-radius: 4px;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+.book-cover:hover .cover-label {
+    opacity: 1;
+}
+
+
+/* ==================== MOBILE ==================== */
+
+@media (max-width: 850px) {
+
+    .eight-months-container {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 45px;
+    }
+
+    .eight-months-content {
+        max-width: 650px;
+    }
+
+    .eight-months-content h2 {
+        font-size: 40px;
+    }
+
+    .book-actions {
+        justify-content: center;
+    }
+
+    .book-covers {
+        width: 100%;
+
+        gap: 15px;
+    }
+
+    .book-cover {
+        width: 45%;
+
+        max-width: 210px;
+
+        height: 295px;
+
+        transform: none;
+    }
+
+}
+
+
+/* ==================== SMALL MOBILE ==================== */
+
+@media (max-width: 500px) {
+
+    .eight-months-section {
+        padding: 65px 15px;
+    }
+
+    .eight-months-content h2 {
+        font-size: 35px;
+    }
+
+    .book-covers {
+        gap: 10px;
+    }
+
+    .book-cover {
+        width: calc(50% - 5px);
+
+        height: 245px;
+    }
+
+    /*
+       Keep the View Cover label visible on phones
+       because phones don't have hover.
+    */
+
+    .cover-label {
+        opacity: 1;
+
+        bottom: 10px;
+
+        padding: 7px 9px;
+
+        font-size: 10px;
+    }
+
+    .book-btn {
+        width: 100%;
+    }
+
+}
+
+
+/* ==================== VERY SMALL PHONES ==================== */
+
+@media (max-width: 360px) {
+
+    .book-cover {
+        height: 220px;
+    }
+
+    .cover-label {
+        font-size: 9px;
+
+        padding: 6px 7px;
+    }
+
+}
+
+
